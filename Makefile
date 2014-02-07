@@ -14,10 +14,11 @@ all:
 
 clean:
 	find . \( -name \*~ -o -name \*.pyc -o -name \*.pyo \) | xargs rm -f
+	rm -rf __pycache__
 	$(MAKE) -C doc clean
 	$(MAKE) -C po clean
 	#remove generated file
-	rm -f DebConf/FrontEnd/Kde/Ui_DebconfWizard.pm
+	rm -f Debconf/FrontEnd/Kde/Ui_DebconfWizard.pm
 
 # Does not attempt to install documentation, as that can be fairly system
 # specific.
@@ -32,6 +33,10 @@ install-utils:
 # Anything that goes in the debconf-i18n package.
 install-i18n:
 	$(MAKE) -C po install
+
+# This would probably be easier if we used setup.py ...
+PYTHON2_SUPPORTED := $(shell pyversions -s)
+PYTHON_SITEDIR = $(prefix)/usr/lib/$(1)/$(if $(filter 2.0 2.1 2.2 2.3 2.4 2.5,$(patsubst python%,%,$(1))),site-packages,dist-packages)
 
 # Install all else.
 install-rest:
@@ -48,16 +53,15 @@ install-rest:
 	# Make module directories.
 	find Debconf -type d |grep -v CVS | \
 		xargs -i install -d $(prefix)/usr/share/perl5/{}
-	install -d \
-		$(prefix)/usr/lib/python2.4/site-packages/ \
-		$(prefix)/usr/lib/python2.5/site-packages/ \
-		$(prefix)/usr/lib/python2.6/dist-packages/
 	# Install modules.
 	find Debconf -type f -name '*.pm' |grep -v CVS | \
 		xargs -i install -m 0644 {} $(prefix)/usr/share/perl5/{}
-	install -m 0644 debconf.py $(prefix)/usr/lib/python2.4/site-packages/
-	install -m 0644 debconf.py $(prefix)/usr/lib/python2.5/site-packages/
-	install -m 0644 debconf.py $(prefix)/usr/lib/python2.6/dist-packages/
+	set -e; for dir in $(foreach python,$(PYTHON2_SUPPORTED),$(call PYTHON_SITEDIR,$(python))); do \
+		install -d $$dir; \
+		install -m 0644 debconf.py $$dir/; \
+	done
+	install -d $(prefix)/usr/lib/python3/dist-packages
+	install -m 0644 debconf.py $(prefix)/usr/lib/python3/dist-packages/
 	# Special case for back-compatability.
 	install -d $(prefix)/usr/share/perl5/Debian/DebConf/Client
 	cp Debconf/Client/ConfModule.stub \

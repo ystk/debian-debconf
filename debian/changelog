@@ -1,10 +1,270 @@
-debconf (1.5.36.1) testing; urgency=low
+debconf (1.5.49) unstable; urgency=low
+
+  * frontend: Don't set title in the maintainer script case when the
+    action is “triggered”. This totally confuses the Debian Installer
+    (“Configuring man-db” instead of “Configuring grub-pc”, notably).
+    Closes: #679327
+
+ -- Cyril Brulebois <kibi@debian.org>  Wed, 26 Dec 2012 02:02:36 +0100
+
+debconf (1.5.48) unstable; urgency=low
+
+  * dpkg-reconfigure: Fix incorrect scoping of control_path that broke
+    handling of multiple packages (closes: #690755, LP: #1076322).
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 10 Dec 2012 13:31:38 +0000
+
+debconf (1.5.47) unstable; urgency=low
+
+  [ Manpages translations ]
+  * German updated.
+
+  [ Joey Hess ]
+  * GTK frontend: Do additional probing in child process to catch cases
+    where trying to use GTK will cause an otherwise uncatchable crash.
+    Closes: #690776 Thanks, James Hunt
+  * debconf-devel.7: Mention that CAPB capabilities are separated with spaces.
+    Closes: #694626
+
+  [ Colin Watson ]
+  * dpkg-reconfigure: Fix trigger processing to cope properly if some of the
+    triggered packages use debconf (closes: #686071).
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 10 Dec 2012 13:18:46 +0000
+
+debconf (1.5.46) unstable; urgency=low
+
+  [ Manpages translations ]
+  * Put the Danish translation of manpages from #664901 in the right
+    place (and also convert its encoding that was broken by a BTS bug)
+  * Activate Danish translation of manpages by adding the needed addenda
+    Closes: #664901
+  
+  [ Programs translations ]
+  * Danish (Joe Dalton). Closes: #683191
+  * Fix typo in the french translation of debconf-show(1)
+    LP: #1025045    
+  * Polish (Marcin Owsiany). Closes: #683207
+  * Japanese (Kenshi Muto). Closes: #683223
+  * Bengali PO file header fixed
+  * Esperanto updated (Felipe Castro).
+  * Indonesian updated (Andika Triwidada).
+  * Simplified Chinese updated (Xingyou Chen).
+  * Bulgarian updated (Damyan Ivanov). Closes: #683245
+  * Russian (Yuri Kozlov). Closes: #683306
+  * Slovak (Ivan Masár). Closes: #683341
+  * French (Steve Petruzzello).
+  * Basque (Iñaki Larrañaga Murgoitio). Closes: #683527
+  * Czech (Miroslav Kure). Closes: #683548
+  * Thai (Theppitak Karoonboonyanan). Closes: #683585
+  * Portuguese (Miguel Figueiredo). Closes: #683615
+  * Finnish (Tommi Vainikainen). Closes: #683967
+  * Catalan (Jordi Mallach).
+  * Vietnamese (Nguyễn Vũ Hưng).
+  * Arabic (Ossama Khayat).
+  * Hebrew (Lior Kaplan).
+
+  [ David Prévot ]
+  * Make sure to keep the previous strings while updating PO files.
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 13 Aug 2012 13:17:14 +0100
+
+debconf (1.5.45) unstable; urgency=low
+
+  [ Programs translations ]
+  * German updated.
+
+  [ Colin Watson ]
+  * dpkg-reconfigure: Fix dpkg-query parsing when detecting which triggers
+    are pending (LP: #1018884).
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 02 Jul 2012 15:57:38 +0100
+
+debconf (1.5.44) unstable; urgency=low
+
+  [ Debconf translations ]
+  * Vietnamese (Hai Lang)
+  * Latvian (Rūdolfs Mazurs).  Closes: #674707
+  * Lithuanian (Rimas Kudelis).  Closes: #675699
+  * Welsh (Daffyd Tomos).
+
+  [ Joey Hess ]
+  * File DbDriver: Get actual filename, following symlinks.
+    This makes it possible to switch back and forth between
+    debconf and cdebconf. Thanks, Regis Boudin
+
+ -- Joey Hess <joeyh@debian.org>  Tue, 19 Jun 2012 19:03:42 -0400
+
+debconf (1.5.43) unstable; urgency=low
+
+  [ Programs translations ]
+  * Danish updated. Closes: #664901
+
+  [ Debconf translations ]
+  * Uyghur (Sahran). Closes: #627013
+  * Serbian Latin (Janos Guljas). Closes: #600143
+
+  [ Colin Watson ]
+  * Make debconf.py Python 3-compatible directly, which only requires
+    dropping pre-2.6 support (2.6 was in squeeze), and drop the separate
+    debconf3.py implementation.  The previous Python 3 implementation
+    expected read and write to be binary files, while this expects them to
+    be text files.  Technically this is an interface break, but since
+    'import debconf; debconf.Debconf()' was failing (since sys.stdin and
+    sys.stdout are text files), I claim that nobody was using this until now
+    anyway.
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 06 May 2012 18:57:59 +0100
+
+debconf (1.5.42) unstable; urgency=low
+
+  [ Joey Hess ]
+  * File DbDriver now creates the directory for the file if it is missing.
+    (All other DbDrivers that write files already did this.) Closes: #636621
+  
+  [ Emmet Hikory ]
+  * Display error messages in noninteractive frontend (Closes: #367497)
+
+  [ Debconf translations ]
+  * Polish (Michał Kułach).  Closes: #657264
+
+  [ Manpages translations ]
+  * German updated.
+  * Portugese updated (Américo Monteiro).
+  * Spanish updated. Closes: #636241
+  * Sinhala; (Danishka Navin).  Closes: #641106
+  * Russian updated. Closes: #656110
+
+  [ Programs translations ]
+  * Norwegian Bokmål updated. Closes: #654798
+
+  [ Joey Hess ]
+  * Add a belt-and-suspenders test that Text::CharWidth::mblen is not
+    returning bogus values, before using Text::WrapI18n. See #641957
+  * Avoid an uninitialized value warning when a blank line is received
+    from the client. Closes: #651642
+
+  [ Colin Watson ]
+  * Remove all hardcoded executable paths, using a new Debconf::Path module.
+
+  [ Raphaël Hertzog ]
+  * Set environment variables expected by maintainer scripts. Closes:
+    #560317
+  * Do not hardcode the path of maintainer scripts, in order to support the
+    multiarch layout.
+
+  [ Colin Watson ]
+  * Process any newly pending triggers after running maintainer scripts.
+
+ -- Colin Watson <cjwatson@debian.org>  Wed, 14 Mar 2012 09:08:49 +0000
+
+debconf (1.5.41) unstable; urgency=low
+
+  [ Colin Watson ]
+  * Make sure __pycache__ is removed on clean (from local python3 tests).
+
+  [ Joey Hess ]
+  * Fix IFS sanitization. Really fixes #381619.
+  * dpkg-reconfigure, dpkg-preconfigure: Call cdebconf versions if
+    the DEBCONF_USE_CDEBCONF variable is set. (Regis Boudin)
+
+ -- Joey Hess <joeyh@debian.org>  Fri, 29 Jul 2011 12:35:06 +0200
+
+debconf (1.5.40) unstable; urgency=low
+
+  [ Joey Hess ]
+  * Updated Russian man page translation. Closes: #625935
+  * Updated Galician translation of program po file. Closes: #626475
+  * Add back documenation for the kde frontend.
+
+  [ Martin Pitt ]
+  * Debconf/FrontEnd/Gnome.pm: Port from Gnome2::Druid to Gtk2::Assistant.
+    Original patch by Jani Monoses, thanks! (Closes: #542175, LP: #415038)
+  * Debconf/Element/Gnome/Select.pm: Drop unused Gnome2 import.
+  * debian/control: Change libgnome2-perl suggestion to libgtk2-perl
+    accordingly.
+
+  [ Colin Watson ]
+  * Fix Gnome frontend to honour backup capability again, and make backup
+    page handling work properly.
+  * Version libgtk2-perl Suggests to match the upstream version where
+    Gtk2::Assistant was introduced.
+  * Convert from deprecated Gtk2::Combo to Gtk2::ComboBox.
+  * Make sure you can't press Forward on a progress bar in the Gnome
+    frontend.
+  * debconf.py: Drop popen2 compatibility code.  subprocess has been
+    available since Python 2.4, which is old enough that it was dropped from
+    squeeze.
+  * Build for all currently supported Python 2 versions (closes: #584844,
+    #626706).
+  * Convert to dh_python2 (closes: #603965, #616786).
+  * Add Python 3 support.
+  * Perl gets a bit confused by Debconf::Config and Debconf::Priority using
+    each other, and objects to bareword use of priority_list in
+    Debconf::Config if you do 'use strict; use Debconf::Priority' before
+    Debconf::Config is loaded.  Work around this.  Thanks to James Hunt for
+    pointing this out.
+
+ -- Colin Watson <cjwatson@debian.org>  Wed, 22 Jun 2011 22:50:23 +0100
+
+debconf (1.5.39) unstable; urgency=low
+
+  [ Joey Hess ]
+  * Moved to a git repository. Updated control file fields.
+  * Removed debconf-english dummy package, and dropped debconf-i18n to a
+    Recommends. Debootstrap will still install debconf-i18n as it is
+    priority Required.
+  * debconf-set-selections: Fix comment handling to match description.
+    In particular, continued lines that start with a "#" are not comments.
+    And, comments only occur at the start of a line (possibly with some
+    whitespace before). Closes: #589519
+  * Updated Danish translation of program po file. Closes: #624645
+
+  [ Steve Langasek ]
+  * Mark debconf Multi-Arch: foreign to indicate that it satisfies the
+    dependencies of packages from other than the native arch.  Closes:
+    #614197
+
+ -- Joey Hess <joeyh@debian.org>  Sat, 30 Apr 2011 12:21:12 -0400
+
+debconf (1.5.38) unstable; urgency=low
+
+  [ Colin Watson ]
+  * Correctly handle disabling the backup capability in a confmodule after
+    it was previously enabled.
 
   [ Christian Perrier ]
   * Fix encoding in Spanish translation. Closes: #607688
   * Fix encoding in Hebrew debconf translation.
 
- -- Joey Hess <joeyh@debian.org>  Sun, 30 Jan 2011 14:28:03 -0400
+  [ Joey Hess ]
+  * Update copyright file to use DEP5 syntax, and expand with some
+    historical data.
+
+ -- Joey Hess <joeyh@debian.org>  Fri, 14 Jan 2011 19:46:27 -0400
+
+debconf (1.5.37) unstable; urgency=low
+
+  [ Manpages translation ]
+  * Spanish added (huge thanks to Omar Campagne). Closes: #599401
+  * French completed (Christian Perrier).
+
+  [ Debconf translations ]
+  * Icelandic (Sveinn í Felli).
+  * Serbian (Janos Guljas).  Closes: #600142
+  * Catalan (Jordi Mallach).  Closes: #600626
+  * Dutch (Eric Spreen).  Closes: #603953
+  * Greek (Emmanuel Galatoulas).  Closes: #604451
+  * Dzongkha (dawa pemo).  Closes: #604458
+
+  [ Helge Kreutzmann ]
+  * Fix (mostly) typos. Thanks Florian Rehnisch <eixman@gmx.de> for noticing.
+    Addresses: #518395.
+    Also unfuzzy all translations as far as possible.
+  * Update German translation where unfuzzing was not enough (actually a no-op
+    as Florian already translated appropriately).
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 29 Nov 2010 18:11:22 +0000
 
 debconf (1.5.36) unstable; urgency=low
 

@@ -12,6 +12,7 @@ use Text::Wrap;
 use Debconf::Gettext;
 use Debconf::Config;
 use Debconf::Log ':all';
+use Debconf::Path;
 use base qw(Debconf::Element::Noninteractive);
 
 =head1 DESCRIPTION
@@ -36,7 +37,10 @@ sub show {
 	my $this=shift;
 
 	if ($this->question->flag('seen') ne 'true') {
-		$this->sendmail(gettext("Debconf was not configured to display this error message, so it mailed it to you."));
+		$this->sendmail(gettext("Debconf is not confident this error message was displayed, so it mailed it to you."));
+
+	$this->frontend->display($this->question->description."\n\n".
+		$this->question->extended_description."\n");
 	}
 	$this->value('');
 }
@@ -58,7 +62,7 @@ sub sendmail {
 	my $this=shift;
 	my $footer=shift;
 	return unless length Debconf::Config->admin_email;
-	if (-x '/usr/bin/mail') {
+	if (Debconf::Path::find("mail")) {
 		debug user => "mailing a note";
 	    	my $title=gettext("Debconf").": ".
 			$this->frontend->title." -- ".

@@ -2,12 +2,12 @@
 # Copyright (C) 2010 Free Software Foundation, Inc.
 # This file is distributed under the same license as the debconf package.
 #
-# Américo Monteiro <a_monteiro@netcabo.pt>, 2010.
+# Américo Monteiro <a_monteiro@netcabo.pt>, 2010, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: debconf 1.5.29\n"
-"POT-Creation-Date: 2010-03-08 13:08+0000\n"
-"PO-Revision-Date: 2010-07-10 20:49+0100\n"
+"Project-Id-Version: debconf\n"
+"POT-Creation-Date: 2012-12-10 13:18+0000\n"
+"PO-Revision-Date: 2012-01-15 19:49+0000\n"
 "Last-Translator: Américo Monteiro <a_monteiro@netcabo.pt>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
 "Language: pt\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: ENCODINGX-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 1.4\n"
 
 #. type: SH
 #: ../../debconf:3 ../../Debconf/Client/ConfModule.pm:3
@@ -209,8 +209,8 @@ msgstr ""
 #: ../../debconf-copydb:101 ../../debconf-getlang:73
 #: ../../debconf-loadtemplate:30 ../../debconf-mergetemplate:60
 #: ../../debconf-set-selections:82 ../../dpkg-preconfigure:59
-#: ../../dpkg-reconfigure:78 debconf.conf.5:537 confmodule.3:36 debconf.7:368
-#: debconf-devel.7:957
+#: ../../dpkg-reconfigure:78 debconf.conf.5:537 confmodule.3:36 debconf.7:376
+#: debconf-devel.7:958
 #, no-wrap
 msgid "SEE ALSO"
 msgstr "VEJA TAMBÉM"
@@ -225,10 +225,10 @@ msgstr "L<debconf-devel(7)>, L<debconf(7)>"
 #: ../../debconf-escape:71 ../../debconf-communicate:73
 #: ../../debconf-copydb:175 ../../debconf-getlang:255
 #: ../../debconf-get-selections:74 ../../debconf-loadtemplate:47
-#: ../../debconf-mergetemplate:180 ../../debconf-set-selections:228
-#: ../../debconf-show:154 ../../dpkg-preconfigure:239
-#: ../../dpkg-reconfigure:264 debconf.conf.5:539 confmodule.3:42 debconf.7:374
-#: debconf-devel.7:967
+#: ../../debconf-mergetemplate:180 ../../debconf-set-selections:227
+#: ../../debconf-show:154 ../../dpkg-preconfigure:244
+#: ../../dpkg-reconfigure:326 debconf.conf.5:539 confmodule.3:42 debconf.7:382
+#: debconf-devel.7:968
 #, no-wrap
 msgid "AUTHOR"
 msgstr "AUTOR"
@@ -238,7 +238,7 @@ msgstr "AUTOR"
 #: ../../debconf-apt-progress:666 ../../debconf-communicate:75
 #: ../../debconf-copydb:177 ../../debconf-getlang:257
 #: ../../debconf-loadtemplate:49 ../../debconf-mergetemplate:182
-#: ../../dpkg-preconfigure:241 ../../dpkg-reconfigure:266
+#: ../../dpkg-preconfigure:246 ../../dpkg-reconfigure:328
 msgid "Joey Hess <joeyh@debian.org>"
 msgstr "Joey Hess <joeyh@debian.org>"
 
@@ -1240,7 +1240,7 @@ msgstr ""
 "log/installer/cdebconf, use o parâmetro --installer."
 
 #. type: textblock
-#: ../../debconf-get-selections:76 ../../debconf-set-selections:230
+#: ../../debconf-get-selections:76 ../../debconf-set-selections:229
 msgid "Petter Reinholdtsen <pere@hungry.com>"
 msgstr "Petter Reinholdtsen <pere@hungry.com>"
 
@@ -2499,10 +2499,10 @@ msgstr ""
 #: debconf.conf.5:226
 msgid ""
 "This database driver accesses a LDAP directory for debconf configuration "
-"data.Due to the nature of the beast, LDAP directories should typically be "
-"accessed in read-only mode.  This is because multiple accesses can take "
+"data. Due to the nature of the beast, LDAP directories should typically be "
+"accessed in read-only mode. This is because multiple accesses can take "
 "place, and it's generally better for data consistency if nobody tries to "
-"modify the data while this is happening.  Of course, write access is "
+"modify the data while this is happening. Of course, write access is "
 "supported for those cases where you do want to update the config data in the "
 "directory."
 msgstr ""
@@ -2563,7 +2563,7 @@ msgstr "B<port>"
 #. type: Plain text
 #: debconf.conf.5:246
 msgid ""
-"The port on which to connect to the LDAP server.  If none is given, the "
+"The port on which to connect to the LDAP server. If none is given, the "
 "default port is used."
 msgstr ""
 "O porto por onde ligar ao servidor LDAP. Se nenhum for fornecido, é usado o "
@@ -2578,9 +2578,9 @@ msgstr "B<basedn>"
 #. type: Plain text
 #: debconf.conf.5:251
 msgid ""
-"The DN under which all config items will be stored.  Each config item will "
-"be assumed to live in a DN of cn=E<lt>item nameE<gt>,E<lt>Base DNE<gt>.  If "
-"this structure is not followed, all bets are off."
+"The DN under which all config items will be stored. Each config item will be "
+"assumed to live in a DN of cn=E<lt>item nameE<gt>,E<lt>Base DNE<gt>. If this "
+"structure is not followed, all bets are off."
 msgstr ""
 "O DN sob o qual todos os itens de configuração serão armazenados. A cada "
 "item de configuração será assumido que vive numa DN de cn=E<lt>item "
@@ -2611,7 +2611,7 @@ msgstr "B<bindpasswd>"
 #. type: Plain text
 #: debconf.conf.5:259
 msgid ""
-"The password to use in an authenticated bind (used with binddn, above).  If "
+"The password to use in an authenticated bind (used with binddn, above). If "
 "not specified, anonymous bind will be used."
 msgstr ""
 "A palavra-passe a usar numa união autenticada (usada com o binddn, em cima). "
@@ -2620,10 +2620,10 @@ msgstr ""
 #. type: Plain text
 #: debconf.conf.5:265
 msgid ""
-"This option should not be used in the general case.  Anonymous binding "
-"should be sufficient most of the time for read-only access.  Specifying a "
-"bind DN and password should be reserved for the occasional case where you "
-"wish to update the debconf configuration data."
+"This option should not be used in the general case. Anonymous binding should "
+"be sufficient most of the time for read-only access. Specifying a bind DN "
+"and password should be reserved for the occasional case where you wish to "
+"update the debconf configuration data."
 msgstr ""
 "Esta opção não deve ser usada nos casos gerais. A união anónima deve ser "
 "suficiente na maioria das vezes para acesso em modo só-leitura. Especificar "
@@ -3328,7 +3328,7 @@ msgid "B<debconf>(7)"
 msgstr "B<debconf>(7)"
 
 #. type: Plain text
-#: debconf.conf.5:540 confmodule.3:43 debconf.7:375 debconf-devel.7:968
+#: debconf.conf.5:540 confmodule.3:43 debconf.7:383 debconf-devel.7:969
 msgid "Joey Hess E<lt>joeyh@debian.orgE<gt>"
 msgstr "Joey Hess E<lt>joeyh@debian.orgE<gt>"
 
@@ -3461,7 +3461,7 @@ msgid ""
 "you to choose from several user interface frontends. It supports "
 "preconfiguring packages before they are installed, which allows large "
 "installs and upgrades to ask you for all the necessary information up front, "
-"and then go do the work while you do something else.  It lets you, if you're "
+"and then go do the work while you do something else. It lets you, if you're "
 "in a hurry, skip over less important questions and information while "
 "installing a package (and revisit it later)."
 msgstr ""
@@ -3507,12 +3507,12 @@ msgstr ""
 #: debconf.7:33
 msgid ""
 "Sometimes you might want to preconfigure a package by hand, when you're not "
-"installing it with apt. You can use B<dpkg-preconfigure(8)> to do that, just "
-"pass it the filenames of the packages you want to preconfigure. You will "
-"need apt-utils installed for that to work."
+"installing it with apt. You can use B<dpkg-preconfigure>(8)  to do that, "
+"just pass it the filenames of the packages you want to preconfigure. You "
+"will need apt-utils installed for that to work."
 msgstr ""
 "Por vezes você pode desejar pré-configurar um pacote manualmente, quando não "
-"está a instalá-lo com o apt. Pode usar o B<dpkg-preconfigure(8)> para isso, "
+"está a instalá-lo com o apt. Pode usar o B<dpkg-preconfigure>(8) para isso, "
 "apenas passe-lhe os nomes de ficheiros dos pacotes que deseja pré-"
 "configurar. Você precisa do apt-utils instalado para isto funcionar."
 
@@ -3591,10 +3591,10 @@ msgstr "B<dialog>"
 #. type: Plain text
 #: debconf.7:60
 msgid ""
-"The default frontend, this uses the B<whiptail(1)> or B<dialog(1)> programs "
-"to display questions to you. It works in text mode."
+"The default frontend, this uses the B<whiptail>(1)  or B<dialog>(1)  "
+"programs to display questions to you. It works in text mode."
 msgstr ""
-"O frontend predefinido, isto usa os programas B<whiptail(1)> ou B<dialog(1)> "
+"O frontend predefinido, isto usa os programas B<whiptail>(1) ou B<dialog>(1) "
 "para lhes mostrar perguntas. Funciona em modo de texto."
 
 #. type: TP
@@ -3654,7 +3654,7 @@ msgid ""
 "This is the anti-frontend. It never interacts with you at all, and makes the "
 "default answers be used for all questions. It might mail error messages to "
 "root, but that's it; otherwise it is completely silent and unobtrusive, a "
-"perfect frontend for automatic installs.  If you are using this front-end, "
+"perfect frontend for automatic installs. If you are using this front-end, "
 "and require non-default answers to questions, you will need to preseed the "
 "debconf database; see the section below on Unattended Package Installation "
 "for more details."
@@ -3690,11 +3690,30 @@ msgstr ""
 #. type: TP
 #: debconf.7:96
 #, no-wrap
+msgid "B<kde>"
+msgstr "B<kde>"
+
+#. type: Plain text
+#: debconf.7:102
+msgid ""
+"This frontend provides a simple X GUI written with the Qt library. It fits "
+"well the KDE desktop. You of course need a DISPLAY to use this frontend and "
+"must install libqt-perl. The frontend will fall back to dialog if some of "
+"the prerequisites are not met."
+msgstr ""
+"Este frontend disponibiliza uma GUI X simples escrita com a biblioteca Qt. "
+"Adapta-se bem ao ambiente de trabalho KDE. Claro que você precisa de um "
+"DISPLAY para usar este frontend e tem de instalar a libqt-perl. O frontend "
+"irá cair para dialog se algum dos pre-requisitos não estiver satisfeito."
+
+#. type: TP
+#: debconf.7:102
+#, no-wrap
 msgid "B<editor>"
 msgstr "B<editor>"
 
 #. type: Plain text
-#: debconf.7:104
+#: debconf.7:110
 msgid ""
 "This is for those fanatics who have to do everything in a text editor. It "
 "runs your editor on a file that looks something like a typical unix config "
@@ -3709,13 +3728,13 @@ msgstr ""
 "levaram à criação deste frontend."
 
 #. type: TP
-#: debconf.7:104
+#: debconf.7:110
 #, no-wrap
 msgid "B<web>"
 msgstr "B<web>"
 
 #. type: Plain text
-#: debconf.7:114
+#: debconf.7:120
 msgid ""
 "This frontend acts as a web server, that you connect to with your web "
 "browser, to browse the questions and answer them.  It has a lot of promise, "
@@ -3731,7 +3750,7 @@ msgstr ""
 "está a configurar."
 
 #. type: Plain text
-#: debconf.7:120
+#: debconf.7:126
 msgid ""
 "Do keep in mind that this is not a very secure frontend.  Anyone who has "
 "access to the computer being configured can currently access the web server "
@@ -3744,7 +3763,7 @@ msgstr ""
 "execução. Portanto isto é mais uma prova de concepção que outra coisa."
 
 #. type: Plain text
-#: debconf.7:127
+#: debconf.7:133
 #, no-wrap
 msgid ""
 "You can change the default frontend debconf uses by reconfiguring\n"
@@ -3760,17 +3779,18 @@ msgstr ""
 "  DEBIAN_FRONTEND=readline apt-get install slrn\n"
 
 #. type: Plain text
-#: debconf.7:135
+#: debconf.7:141
 msgid ""
-"The B<dpkg-reconfigure(8)> and B<dpkg-preconfigure(8)> commands also let you "
-"pass I<--frontend=> to them, followed by the frontend you want them to use."
+"The B<dpkg-reconfigure>(8)  and B<dpkg-preconfigure>(8)  commands also let "
+"you pass I<--frontend=> to them, followed by the frontend you want them to "
+"use."
 msgstr ""
-"Os comandos B<dpkg-reconfigure(8)> e B<dpkg-preconfigure(8)> também lhe "
+"Os comandos B<dpkg-reconfigure>(8) e B<dpkg-preconfigure>(8) também lhe "
 "permitem passar I<--frontend=> para eles, seguido do frontend que deseja que "
 "estes usem."
 
 #. type: Plain text
-#: debconf.7:139
+#: debconf.7:145
 msgid ""
 "Note that not all frontends will work in all circumstances. If a frontend "
 "fails to start up for some reason, debconf will print out a message "
@@ -3782,13 +3802,13 @@ msgstr ""
 "seguinte."
 
 #. type: SH
-#: debconf.7:139
+#: debconf.7:145
 #, no-wrap
 msgid "Priorities"
 msgstr "Propriedades"
 
 #. type: Plain text
-#: debconf.7:146
+#: debconf.7:152
 msgid ""
 "Another nice feature of debconf is that the questions it asks you are "
 "prioritized. If you don't want to be bothered about every little thing, you "
@@ -3804,13 +3824,13 @@ msgstr ""
 "ordem de importância em sequência crescente:"
 
 #. type: TP
-#: debconf.7:146 debconf-devel.7:294
+#: debconf.7:152 debconf-devel.7:294
 #, no-wrap
 msgid "B<low>"
 msgstr "B<low>"
 
 #. type: Plain text
-#: debconf.7:150
+#: debconf.7:156
 msgid ""
 "Very trivial questions that have defaults that will work in the vast "
 "majority of cases."
@@ -3819,85 +3839,86 @@ msgstr ""
 "maioria dos casos."
 
 #. type: TP
-#: debconf.7:150 debconf-devel.7:298
+#: debconf.7:156 debconf-devel.7:298
 #, no-wrap
 msgid "B<medium>"
 msgstr "B<medium>"
 
 #. type: Plain text
-#: debconf.7:153
+#: debconf.7:159
 msgid "Normal questions that have reasonable defaults."
 msgstr "Questões normais que têm predefinições razoáveis."
 
 #. type: TP
-#: debconf.7:153 debconf-devel.7:301
+#: debconf.7:159 debconf-devel.7:301
 #, no-wrap
 msgid "B<high>"
 msgstr "B<high>"
 
 #. type: Plain text
-#: debconf.7:156
+#: debconf.7:162
 msgid "Questions that don't have a reasonable default."
 msgstr "Questões que não têm uma predefinição razoável."
 
 #. type: TP
-#: debconf.7:156 debconf-devel.7:304
+#: debconf.7:162 debconf-devel.7:304
 #, no-wrap
 msgid "B<critical>"
 msgstr "B<critical>"
 
 #. type: Plain text
-#: debconf.7:159
+#: debconf.7:165
 msgid "Questions that you really, really need to see (or else)."
 msgstr "Questões que você precisa realmente de ver (ou então nada feito)."
 
 #. type: Plain text
-#: debconf.7:169
+#: debconf.7:175
 msgid ""
 "Only questions with a priority equal to or greater than the priority you "
 "choose will be shown to you. You can set the priority value by reconfiguring "
 "debconf, or temporarily by passing I<--priority=> followed by the value to "
-"the B<dpkg-reconfigure(8)> and B<dpkg-preconfigure(8)> commands, or by "
+"the B<dpkg-reconfigure>(8)  and B<dpkg-preconfigure>(8)  commands, or by "
 "setting the DEBIAN_PRIORITY environment variable."
 msgstr ""
 "Apenas as questões com uma prioridade igual ou maior que a prioridade que "
 "escolheu lhe serão mostradas. Você pode definir o valor da prioridade ao "
 "reconfigurar o debconf, ou temporariamente passando I<--priority=> seguido "
-"do valor aos comandos B<dpkg-reconfigure(8)> e B<dpkg-preconfigure(8)>, ou "
+"do valor aos comandos B<dpkg-reconfigure>(8) e B<dpkg-preconfigure>(8), ou "
 "ao definir a variável de ambiente DEBIAN_PRIORITY."
 
 #. type: SH
-#: debconf.7:169
+#: debconf.7:175
 #, no-wrap
 msgid "Backend Database"
 msgstr "Base de Dados de Backend"
 
 #. type: Plain text
-#: debconf.7:180
+#: debconf.7:187
 msgid ""
 "Debconf uses a rather flexible and potentially complicated backend database "
 "for storing data such as the answers to questions. The file B</etc/debconf."
 "conf> is used to configure this database. If you need to set up something "
 "complicated, like make debconf read a remote database to get defaults, with "
-"local overrides, read the B<debconf.conf(5)> man page for all the gory "
-"details. Generally, the backend database is located in B</var/cache/debconf/>"
+"local overrides, read the B<debconf.conf>(5)  man page for all the gory "
+"details. Generally, the backend database is located in B</var/cache/debconf/"
+"> ."
 msgstr ""
 "O debconf usa base de dados de backend muito flexível e potencialmente "
 "complicada para armazenar dados como as respostas às questões. O ficheiro B</"
 "etc/debconf.conf> é usado para configurar esta base de dados. Se você "
 "precisar de definir algo complicado, como fazer o debconf ler uma base de "
 "dados remota para obter predefinições, com sobreposições locais, leia o "
-"manual B<debconf.conf(5)> para todos os detalhes mais chatos. Geralmente, a "
-"base de dados de backend está localizada em B</var/cache/debconf/>"
+"manual B<debconf.conf>(5) para todos os detalhes mais chatos. Geralmente, a "
+"base de dados de backend está localizada em B</var/cache/debconf/>."
 
 #. type: SH
-#: debconf.7:180
+#: debconf.7:187
 #, no-wrap
 msgid "Unattended Package Installation"
 msgstr "Instalação de Pacotes Não Acompanhada"
 
 #. type: Plain text
-#: debconf.7:187
+#: debconf.7:194
 msgid ""
 "If you have many machines to manage you will sometimes find yourself in the "
 "position of needing to perform an unattended installation or upgrade of "
@@ -3914,31 +3935,31 @@ msgstr ""
 "obter as respostas que você quer."
 
 #. type: Plain text
-#: debconf.7:191
+#: debconf.7:198
 msgid ""
-"You should really read B<debconf.conf(5)> before this section, as you need "
+"You should really read B<debconf.conf>(5)  before this section, as you need "
 "to understand how debconf's databases work."
 msgstr ""
-"Você deveria mesmo ler B<debconf.conf(5)> antes desta secção, pois precisa "
+"Você deveria mesmo ler B<debconf.conf>(5) antes desta secção, pois precisa "
 "de compreender como funcionam as bases de dados do debconf."
 
 #. type: Plain text
-#: debconf.7:198
+#: debconf.7:205
 msgid ""
 "The easiest way to set up the database is to install the packages on one "
 "machine and answer their questions as usual. Or you might just use B<dpkg-"
-"preconfigure(8)> to configure a set of packages without actually installing "
+"preconfigure>(8)  to configure a set of packages without actually installing "
 "them. Or you might even decide to write a plain text debconf database by "
 "hand or something."
 msgstr ""
 "A maneira mais fácil de definir uma base de dados é instalar os pacotes em "
 "uma máquina e responder às suas perguntas como usualmente. Ou você pode usar "
-"B<dpkg-preconfigure(8)> para configurar um conjunto de pacotes sem realmente "
+"B<dpkg-preconfigure>(8) para configurar um conjunto de pacotes sem realmente "
 "os instalar. Ou você pode até decidir escrever uma base de dados debconf em "
 "texto simples manualmente ou algo do género."
 
 #. type: Plain text
-#: debconf.7:202
+#: debconf.7:209
 msgid ""
 "Once you have the database, you need to figure out how to make the remote "
 "systems use it. This depends of course on the configuration of those systems "
@@ -3949,7 +3970,7 @@ msgstr ""
 "quais são os tipos de bases de dados que eles têm definido para usar."
 
 #. type: Plain text
-#: debconf.7:206
+#: debconf.7:213
 msgid ""
 "If you are using the LDAP debconf database, an entire network of debian "
 "machines can also have any or all package installation questions answered "
@@ -3960,7 +3981,7 @@ msgstr ""
 "pacotes respondidas automaticamente por um único servidor LDAP."
 
 #. type: Plain text
-#: debconf.7:215
+#: debconf.7:222
 msgid ""
 "But perhaps you're using something a little bit easier to set up like, say, "
 "the default debconf database configuration, or you just don't want your "
@@ -3981,7 +4002,7 @@ msgstr ""
 "fácil fazer isto na hora. Aqui está um exemplo de utilização:"
 
 #. type: Plain text
-#: debconf.7:219
+#: debconf.7:226
 #, no-wrap
 msgid ""
 "   cat /var/cache/debconf/config.dat | \\e\n"
@@ -3993,7 +4014,7 @@ msgstr ""
 "                  DEBCONF_DB_FALLBACK=Pipe apt-get upgrade\"\n"
 
 #. type: Plain text
-#: debconf.7:225
+#: debconf.7:232
 msgid ""
 "This makes the debconf on the remote host read in the data that is piped "
 "across the ssh connection and interpret it as a plain text format debconf "
@@ -4009,13 +4030,13 @@ msgstr ""
 "não tiver as respostas."
 
 #. type: Plain text
-#: debconf.7:227
+#: debconf.7:234
 msgid "Here's another way to use the DEBCONF_DB_FALLBACK environment variable:"
 msgstr ""
 "Aqui está outro modo de usar a variável de ambiente DEBCONF_DB_FALLBACK:"
 
 #. type: Plain text
-#: debconf.7:230
+#: debconf.7:237
 #, no-wrap
 msgid ""
 "  ssh -R 389:ldap:389 root@target \\e\n"
@@ -4025,7 +4046,7 @@ msgstr ""
 "  \t\"DEBCONF_DB_FALLBACK='LDAP{host:localhost}' apt-get upgrade\"\n"
 
 #. type: Plain text
-#: debconf.7:235
+#: debconf.7:242
 msgid ""
 "Here ssh is used to set up a tunneled LDAP connection and run debconf.  "
 "Debconf is told to use the LDAP server as the fallback database. Note the "
@@ -4039,12 +4060,12 @@ msgstr ""
 "de \"localhost\"."
 
 #. type: Plain text
-#: debconf.7:237
+#: debconf.7:244
 msgid "Here's another method:"
 msgstr "Aqui está outro método:"
 
 #. type: Plain text
-#: debconf.7:240
+#: debconf.7:247
 #, no-wrap
 msgid ""
 "  scp config.dat root@target:\n"
@@ -4054,7 +4075,7 @@ msgstr ""
 "  ssh root@target \"DEBCONF_DB_FALLBACK='File{/root/config.dat}' apt-get upgrade\n"
 
 #. type: Plain text
-#: debconf.7:245
+#: debconf.7:252
 msgid ""
 "Here you copy the database over with scp, and then ssh over and make debconf "
 "use the file you copied over. This illustrates a shorthand you can use in "
@@ -4067,7 +4088,7 @@ msgstr ""
 "por predefinição \"filename\"."
 
 #. type: Plain text
-#: debconf.7:254
+#: debconf.7:261
 msgid ""
 "There is only one problem with these uses of the DEBCONF_DB_FALLBACK "
 "parameter: While the fallback database can provide answers to questions the "
@@ -4088,22 +4109,22 @@ msgstr ""
 "outras, e pode ser usada para sobrepor valores existentes."
 
 #. type: SH
-#: debconf.7:254
+#: debconf.7:261
 #, no-wrap
 msgid "Developing for Debconf"
 msgstr "Desenvolvendo para Debconf"
 
 #. type: Plain text
-#: debconf.7:258
+#: debconf.7:266
 msgid ""
 "Package developers and others who want to develop packages that use debconf "
-"should read B<debconf-devel(7)>."
+"should read B<debconf-devel>(7)  ."
 msgstr ""
 "Programadores de pacotes e outros que desejam desenvolver pacotes que usam "
-"debconf devem ler B<debconf-devel(7)>."
+"debconf devem ler B<debconf-devel>(7)."
 
 #. type: Plain text
-#: debconf.7:266
+#: debconf.7:274
 msgid ""
 "Briefly, debconf communicates with maintainer scripts or other programs via "
 "standard input and output, using a simple line-oriented command language "
@@ -4123,7 +4144,7 @@ msgstr ""
 "controle debian."
 
 #. type: Plain text
-#: debconf.7:270
+#: debconf.7:278
 msgid ""
 "Debian packages which use debconf typically provide both a templates file "
 "and a \"config\" script (run to preconfigure the package) in the control "
@@ -4134,32 +4155,32 @@ msgstr ""
 "configurar o pacote) na secção de meta-dados de control do pacote."
 
 #. type: SH
-#: debconf.7:270
+#: debconf.7:278
 #, no-wrap
 msgid "ENVIRONMENT"
 msgstr "AMBIENTE"
 
 #. type: TP
-#: debconf.7:271
+#: debconf.7:279
 #, no-wrap
 msgid "B<DEBIAN_FRONTEND>"
 msgstr "B<DEBIAN_FRONTEND>"
 
 #. type: Plain text
-#: debconf.7:274
+#: debconf.7:282
 msgid "Used to temporarily change the frontend debconf uses. See above."
 msgstr ""
 "Usado para alterar temporariamente o frontend que o debconf usa. Veja em "
 "cima."
 
 #. type: TP
-#: debconf.7:274
+#: debconf.7:282
 #, no-wrap
 msgid "B<DEBIAN_PRIORITY>"
 msgstr "B<DEBIAN_PRIORITY>"
 
 #. type: Plain text
-#: debconf.7:278
+#: debconf.7:286
 msgid ""
 "Used to temporarily change the minimum priority of question debconf will "
 "display. See above."
@@ -4168,13 +4189,13 @@ msgstr ""
 "debconf irá mostrar. Veja em cima."
 
 #. type: TP
-#: debconf.7:278 debconf-devel.7:575
+#: debconf.7:286 debconf-devel.7:576
 #, no-wrap
 msgid "B<DEBCONF_DEBUG>"
 msgstr "B<DEBCONF_DEBUG>"
 
 #. type: Plain text
-#: debconf.7:284
+#: debconf.7:292
 msgid ""
 "Turns on debugging output on standard error. May be set to a facility name "
 "or a regular expression which matches a facility name (such as '.*' to "
@@ -4186,46 +4207,46 @@ msgstr ""
 "nomes de instituições incluem:"
 
 #. type: TP
-#: debconf.7:284
+#: debconf.7:292
 #, no-wrap
 msgid "B<user>"
 msgstr "B<user>"
 
 #. type: Plain text
-#: debconf.7:287
+#: debconf.7:295
 msgid "Debugging info of interest to a debconf user."
 msgstr "Informação de depuração de interesse a um utilizador do debconf."
 
 #. type: TP
-#: debconf.7:287
+#: debconf.7:295
 #, no-wrap
 msgid "B<developer>"
 msgstr "B<developer>"
 
 #. type: Plain text
-#: debconf.7:290
+#: debconf.7:298
 msgid "Debugging info of interest to a package developer."
 msgstr "Informação de depuração de interesse para um programador de pacote."
 
 #. type: TP
-#: debconf.7:290
+#: debconf.7:298
 #, no-wrap
 msgid "B<db>"
 msgstr "B<db>"
 
 #. type: Plain text
-#: debconf.7:293
+#: debconf.7:301
 msgid "Debugging info about the backend database."
 msgstr "Informação de depuração acerca da base de dados backend."
 
 #. type: TP
-#: debconf.7:294
+#: debconf.7:302
 #, no-wrap
 msgid "B<DEBCONF_NOWARNINGS>"
 msgstr "B<DEBCONF_NOWARNINGS>"
 
 #. type: Plain text
-#: debconf.7:298
+#: debconf.7:306
 msgid ""
 "Set to \"yes\" to disable some warnings that debconf may display. Does not "
 "suppress display of fatal errors."
@@ -4234,13 +4255,13 @@ msgstr ""
 "mostrar. Não suprime a exibição de erros fatais."
 
 #. type: TP
-#: debconf.7:298
+#: debconf.7:306
 #, no-wrap
 msgid "B<DEBCONF_TERSE>"
 msgstr "B<DEBCONF_TERSE>"
 
 #. type: Plain text
-#: debconf.7:302
+#: debconf.7:310
 msgid ""
 "Set to \"yes\" to enable terse mode, in which debconf frontends cut down on "
 "the verbiage as much as possible."
@@ -4249,13 +4270,13 @@ msgstr ""
 "debconf cortam na exibição de detalhes o máximo possível."
 
 #. type: TP
-#: debconf.7:302
+#: debconf.7:310
 #, no-wrap
 msgid "B<DEBCONF_DB_FALLBACK>"
 msgstr "B<DEBCONF_DB_FALLBACK>"
 
 #. type: Plain text
-#: debconf.7:312
+#: debconf.7:320
 msgid ""
 "Stack a database after the normally used databases, so that it is used as a "
 "fallback to get configuration information from. See \"Unattended Package "
@@ -4277,7 +4298,7 @@ msgstr ""
 "pode especificar um valor que tenha espaços em branco."
 
 #. type: Plain text
-#: debconf.7:315
+#: debconf.7:323
 #, no-wrap
 msgid ""
 "Thus, this uses the fallbackdb in debconf.conf:\n"
@@ -4287,7 +4308,7 @@ msgstr ""
 "  DEBCONF_DB_FALLBACK=fallbackdb\n"
 
 #. type: Plain text
-#: debconf.7:319
+#: debconf.7:327
 #, no-wrap
 msgid ""
 "While this sets up a new database of type File, and tells it a filename to\n"
@@ -4299,7 +4320,7 @@ msgstr ""
 "  DEBCONF_DB_FALLBACK=File{Filename:/root/config.dat Backup:no}\n"
 
 #. type: Plain text
-#: debconf.7:322
+#: debconf.7:330
 #, no-wrap
 msgid ""
 "And as a shorthand, this sets up a database of type File with a filename:\n"
@@ -4310,7 +4331,7 @@ msgstr ""
 "  DEBCONF_DB_FALLBACK=File{/root/config.dat}\n"
 
 #. type: Plain text
-#: debconf.7:325
+#: debconf.7:333
 msgid ""
 "Note that if a fallback database is set up on the fly, it will be read-only "
 "by default."
@@ -4319,13 +4340,13 @@ msgstr ""
 "irá ficar em apenas-leitura por predefinição."
 
 #. type: TP
-#: debconf.7:325
+#: debconf.7:333
 #, no-wrap
 msgid "B<DEBCONF_DB_OVERRIDE>"
 msgstr "B<DEBCONF_DB_OVERRIDE>"
 
 #. type: Plain text
-#: debconf.7:330
+#: debconf.7:338
 msgid ""
 "Stack a database before the normally used databases, so that it can override "
 "values from them. The value of the variable works the same as does the value "
@@ -4336,13 +4357,13 @@ msgstr ""
 "que o valor de DEBCONF_DB_FALLBACK."
 
 #. type: TP
-#: debconf.7:330
+#: debconf.7:338
 #, no-wrap
 msgid "B<DEBCONF_DB_REPLACE>"
 msgstr "B<DEBCONF_DB_REPLACE>"
 
 #. type: Plain text
-#: debconf.7:335
+#: debconf.7:343
 msgid ""
 "Use a given database instead of the normally used databases.  This may be "
 "useful for testing with a separate database without having to create a "
@@ -4354,13 +4375,13 @@ msgstr ""
 "dados normais."
 
 #. type: TP
-#: debconf.7:335
+#: debconf.7:343
 #, no-wrap
 msgid "B<DEBCONF_SYSTEMRC>"
 msgstr "B<DEBCONF_SYSTEMRC>"
 
 #. type: Plain text
-#: debconf.7:341
+#: debconf.7:349
 msgid ""
 "If this environment variable is set, debconf will ignore a user's ~/."
 "debconfrc file, and use the system one instead.  If it is set to the name of "
@@ -4373,13 +4394,13 @@ msgstr ""
 "ficheiro em preferência dos ficheiros de configuração do sistema."
 
 #. type: TP
-#: debconf.7:341
+#: debconf.7:349
 #, no-wrap
 msgid "B<DEBCONF_FORCE_DIALOG>"
 msgstr "B<DEBCONF_FORCE_DIALOG>"
 
 #. type: Plain text
-#: debconf.7:345
+#: debconf.7:353
 msgid ""
 "If this environment variable is set, debconf will use dialog in preference "
 "to whiptail for the dialog frontend."
@@ -4388,13 +4409,13 @@ msgstr ""
 "em preferência do whiptail para o frontend do diálogo."
 
 #. type: TP
-#: debconf.7:345
+#: debconf.7:353
 #, no-wrap
 msgid "B<DEBCONF_FORCE_XDIALOG>"
 msgstr "B<DEBCONF_FORCE_XDIALOG>"
 
 #. type: Plain text
-#: debconf.7:349
+#: debconf.7:357
 msgid ""
 "If this environment variable is set, debconf will use Xdialog in preference "
 "to whiptail for the dialog frontend."
@@ -4403,13 +4424,13 @@ msgstr ""
 "em preferência do whiptail para o frontend de diálogo."
 
 #. type: TP
-#: debconf.7:349
+#: debconf.7:357
 #, no-wrap
 msgid "B<DEBCONF_NONINTERACTIVE_SEEN>"
 msgstr "B<DEBCONF_NONINTERACTIVE_SEEN>"
 
 #. type: Plain text
-#: debconf.7:353
+#: debconf.7:361
 msgid ""
 "Set to \"true\" to cause the seen flag to be set for questions asked in the "
 "noninteractive frontend."
@@ -4418,18 +4439,18 @@ msgstr ""
 "feitas no frontend noninteractive."
 
 #. type: SH
-#: debconf.7:353
+#: debconf.7:361
 #, no-wrap
 msgid "BUGS"
 msgstr "BUGS"
 
 #. type: Plain text
-#: debconf.7:355
+#: debconf.7:363
 msgid "Probably quite a few, there's a lot of code here."
 msgstr "Provavelmente alguns, existe muito código aqui."
 
 #. type: Plain text
-#: debconf.7:357
+#: debconf.7:365
 msgid ""
 "If you do file a bug report, be sure to include the following information:"
 msgstr ""
@@ -4437,25 +4458,25 @@ msgstr ""
 "informação:"
 
 #. type: TP
-#: debconf.7:357 debconf.7:360 debconf.7:363 debconf-devel.7:468
-#: debconf-devel.7:472 debconf-devel.7:478 debconf-devel.7:483
-#: debconf-devel.7:488
+#: debconf.7:365 debconf.7:368 debconf.7:371 debconf-devel.7:469
+#: debconf-devel.7:473 debconf-devel.7:479 debconf-devel.7:484
+#: debconf-devel.7:489
 #, no-wrap
 msgid "B<*>"
 msgstr "B<*>"
 
 #. type: Plain text
-#: debconf.7:360
+#: debconf.7:368
 msgid "The debconf frontend you were using when the problem occurred"
 msgstr "O frontend do debconf que estava a usar quando o problema ocorreu"
 
 #. type: Plain text
-#: debconf.7:363
+#: debconf.7:371
 msgid "What you did to trigger the problem."
 msgstr "O que você fez para despoletar o problema."
 
 #. type: Plain text
-#: debconf.7:368
+#: debconf.7:376
 msgid ""
 "The full text of any error messages. If you can reproduce the bug, do so "
 "with DEBCONF_DEBUG='.*' set and exported. This speeds up debugging a lot."
@@ -4465,7 +4486,7 @@ msgstr ""
 "imenso a depuração."
 
 #. type: Plain text
-#: debconf.7:374
+#: debconf.7:382
 msgid ""
 "B<debconf.conf>(5), B<debconf-devel>(7), B<dpkg-preconfigure>(8), B<dpkg-"
 "reconfigure>(8), B<debconf>(1),"
@@ -5024,7 +5045,7 @@ msgstr ""
 #: debconf-devel.7:198
 msgid ""
 "Text in the extended description will be word-wrapped, unless it is prefixed "
-"by additional whitespace (beyond the one required space).  You can break it "
+"by additional whitespace (beyond the one required space). You can break it "
 "up into separate paragraphs by putting \" .\" on a line by itself between "
 "them."
 msgstr ""
@@ -5192,11 +5213,17 @@ msgstr "B<CAPB capabilities>"
 
 #. type: Plain text
 #: debconf-devel.7:257
+#, fuzzy
+#| msgid ""
+#| "You generally don't need to use this command. It exchanges with debconf a "
+#| "list of supported capabilities. Capabilities that both you and debconf "
+#| "support will be used, and debconf will reply with all the capabilities it "
+#| "supports."
 msgid ""
 "You generally don't need to use this command. It exchanges with debconf a "
-"list of supported capabilities. Capabilities that both you and debconf "
-"support will be used, and debconf will reply with all the capabilities it "
-"supports."
+"list of supported capabilities (separated by spaces). Capabilities that both "
+"you and debconf support will be used, and debconf will reply with all the "
+"capabilities it supports."
 msgstr ""
 "Geralmente você não precisa de usar este comando. Ele troca com o debconf "
 "uma lista das capacidades suportadas. As capacidades que ambos você e o "
@@ -5619,7 +5646,7 @@ msgstr "B<X_LOADTEMPLATEFILE /caminho/para/templates [dono]>"
 #. type: Plain text
 #: debconf-devel.7:402
 msgid ""
-"This extension loads the specified template file, into debconf's database.  "
+"This extension loads the specified template file into debconf's database.  "
 "The owner defaults to the package that is being configured with debconf."
 msgstr ""
 "Esta extensão carrega o ficheiro template específico na base de dados do "
@@ -5681,31 +5708,31 @@ msgstr ""
 "bibliotecas para aliviar esta pequena trabalheira."
 
 #. type: Plain text
-#: debconf-devel.7:429
+#: debconf-devel.7:430
 msgid ""
 "For shell programming, there is the /usr/share/debconf/confmodule library, "
 "which you can source at the top of a shell script, and talk to debconf in a "
 "fairly natural way, using lower-case versions of the debconf protocol "
 "commands, that are prefixed with \"db_\" (ie, \"db_input\" and \"db_go\"). "
-"For details, see B<confmodule(3)>."
+"For details, see B<confmodule>(3)  ."
 msgstr ""
 "Para programação em shell, existe a biblioteca /usr/share/debconf/"
 "confmodule, a qual você pode usar no topo de um script shell, e falar com o "
 "debconf dum modo bastante natural, usando versões em minúsculas dos comandos "
 "do protocolo debconf, que estão prefixados com \"db_\" (ie, \"db_input\" e "
-"\"db_go\"). Para detalhes veja B<confmodule(3)>."
+"\"db_go\"). Para detalhes veja B<confmodule>(3)."
 
 #. type: Plain text
-#: debconf-devel.7:433
+#: debconf-devel.7:434
 msgid ""
-"Perl programmers can use the B<Debconf::Client::ConfModule(3)> perl module, "
-"and python programmers can use the debconf python module."
+"Perl programmers can use the B<Debconf::Client::ConfModule>(3pm)  perl "
+"module, and python programmers can use the debconf python module."
 msgstr ""
-"Programadores de Perl podem usar o módulo B<Debconf::Client::ConfModule(3)>, "
-"e programadores de python podem usar o módulo python do debconf."
+"Programadores de Perl podem usar o módulo B<Debconf::Client::ConfModule>"
+"(3pm), e programadores de python podem usar o módulo python do debconf."
 
 #. type: Plain text
-#: debconf-devel.7:437
+#: debconf-devel.7:438
 msgid ""
 "The rest of this manual will use the /usr/share/debconf/confmodule library "
 "in example shell scripts. Here is an example config script using that "
@@ -5716,7 +5743,7 @@ msgstr ""
 "essa biblioteca, que apenas faz uma pergunta:"
 
 #. type: Plain text
-#: debconf-devel.7:444
+#: debconf-devel.7:445
 #, no-wrap
 msgid ""
 "  #!/bin/sh\n"
@@ -5734,7 +5761,7 @@ msgstr ""
 "  db_go || true\n"
 
 #. type: Plain text
-#: debconf-devel.7:449
+#: debconf-devel.7:450
 msgid ""
 "Notice the uses of \"|| true\" to prevent the script from dying if debconf "
 "decides it can't display a question, or the user tries to back up. In those "
@@ -5748,7 +5775,7 @@ msgstr ""
 "código de saída não previsto irá fazê-lo abortar."
 
 #. type: Plain text
-#: debconf-devel.7:453
+#: debconf-devel.7:454
 msgid ""
 "And here is a corresponding postinst script, that uses the user's answer to "
 "the question to see if the system should be rebooted (a rather absurd "
@@ -5759,7 +5786,7 @@ msgstr ""
 "exemplo bastante absurdo...):"
 
 #. type: Plain text
-#: debconf-devel.7:461
+#: debconf-devel.7:462
 #, no-wrap
 msgid ""
 "  #!/bin/sh\n"
@@ -5779,7 +5806,7 @@ msgstr ""
 "  fi\n"
 
 #. type: Plain text
-#: debconf-devel.7:464
+#: debconf-devel.7:465
 msgid ""
 "Notice the use of the $RET variable to get at the extended return code from "
 "the GET command, which holds the user's answer to the question."
@@ -5788,13 +5815,13 @@ msgstr ""
 "extenso do comando GET, o qual detém a resposta do utilizador para a questão."
 
 #. type: SH
-#: debconf-devel.7:464
+#: debconf-devel.7:465
 #, no-wrap
 msgid "THE POSTINST SCRIPT"
 msgstr "O SCRIPT POSTINST"
 
 #. type: Plain text
-#: debconf-devel.7:468
+#: debconf-devel.7:469
 msgid ""
 "The last section had an example of a postinst script that uses debconf to "
 "get the value of a question, and act on it. Here are some things to keep in "
@@ -5805,7 +5832,7 @@ msgstr ""
 "ter em mente quando escrever scripts postinst que usam debconf:"
 
 #. type: Plain text
-#: debconf-devel.7:472
+#: debconf-devel.7:473
 msgid ""
 "Avoid asking questions in the postinst. Instead, the config script should "
 "ask questions using debconf, so that pre-configuration will work."
@@ -5814,7 +5841,7 @@ msgstr ""
 "deve fazer as questões usando debconf, para que a pré-configuração funcione."
 
 #. type: Plain text
-#: debconf-devel.7:478
+#: debconf-devel.7:479
 msgid ""
 "Always source /usr/share/debconf/confmodule at the top of your postinst, "
 "even if you won't be running any db_* commands in it.  This is required to "
@@ -5826,7 +5853,7 @@ msgstr ""
 "mais detalhes)."
 
 #. type: Plain text
-#: debconf-devel.7:483
+#: debconf-devel.7:484
 msgid ""
 "Avoid outputting anything to stdout in your postinst, since that can confuse "
 "debconf, and postinst should not be verbose anyway. Output to stderr is ok, "
@@ -5837,7 +5864,7 @@ msgstr ""
 "para o stderr é boa ideia, se tiver mesmo que ser."
 
 #. type: Plain text
-#: debconf-devel.7:488
+#: debconf-devel.7:489
 msgid ""
 "If your postinst launches a daemon, make sure you tell debconf to STOP at "
 "the end, since debconf can become a little confused about when your postinst "
@@ -5848,7 +5875,7 @@ msgstr ""
 "confuso acerca de quando o seu postinst terminou."
 
 #. type: Plain text
-#: debconf-devel.7:493
+#: debconf-devel.7:494
 msgid ""
 "Make your postinst script accept a first parameter of \"reconfigure\". It "
 "can treat it just like \"configure\". This will be used in a later version "
@@ -5860,28 +5887,28 @@ msgstr ""
 "reconfigurados."
 
 #. type: SH
-#: debconf-devel.7:493
+#: debconf-devel.7:494
 #, no-wrap
 msgid "OTHER SCRIPTS"
 msgstr "OUTROS SCRIPTS"
 
 #. type: Plain text
-#: debconf-devel.7:501
+#: debconf-devel.7:502
 msgid ""
 "Besides the config script and postinst, you can use debconf in any of the "
 "other maintainer scripts. Most commonly, you'll be using debconf in your "
-"postrm, to call the PURGE command when your package is removed, to clean out "
+"postrm, to call the PURGE command when your package is purged, to clean out "
 "its entries in the debconf database. (This is automatically set up for you "
 "by B<dh_installdebconf>(1)B<,> by the way.)"
 msgstr ""
 "À parte dos scripts config e postinst, você pode usar o debconf em qualquer "
 "dos outros scripts do maintainer. Mais geralmente, você vai usar debconf no "
-"seu postrm, para chamar o comando PURGE quando o seu pacote é removido, para "
+"seu postrm, para chamar o comando PURGE quando o seu pacote é purgado, para "
 "limpar as suas entradas na base de dados debconf. (Já agora, isto é definido "
 "automaticamente para si por B<dh_installdebconf>(1)B<,>.)"
 
 #. type: Plain text
-#: debconf-devel.7:509
+#: debconf-devel.7:510
 msgid ""
 "A more involved use of debconf would be if you want to use it in the postrm "
 "when your package is purged, to ask a question about deleting something. Or "
@@ -5898,7 +5925,7 @@ msgstr ""
 "de separar as duas actividades como é feito pelos scripts config e postinst."
 
 #. type: Plain text
-#: debconf-devel.7:514
+#: debconf-devel.7:515
 msgid ""
 "Note that if your package's sole use of debconf is in the postrm, you should "
 "make your package's postinst source /usr/share/debconf/confmodule, to give "
@@ -5912,7 +5939,7 @@ msgstr ""
 "pacote for purgado."
 
 #. type: Plain text
-#: debconf-devel.7:521
+#: debconf-devel.7:522
 msgid ""
 "You can also use debconf in other, standalone programs. The issue to watch "
 "out for here is that debconf is not intended to be, and must not be used as "
@@ -5929,7 +5956,7 @@ msgstr ""
 "Portanto pense bem antes de usar o debconf num programa standalone."
 
 #. type: Plain text
-#: debconf-devel.7:526
+#: debconf-devel.7:527
 msgid ""
 "There are times when it can make sense, as in the apt-setup program which "
 "uses debconf to prompt the user in a manner consistent with the rest of the "
@@ -5942,13 +5969,13 @@ msgstr ""
 "configurar o sources.list do apt."
 
 #. type: SH
-#: debconf-devel.7:526
+#: debconf-devel.7:527
 #, no-wrap
 msgid "LOCALIZATION"
 msgstr "LOCALIZAÇÃO"
 
 #. type: Plain text
-#: debconf-devel.7:533
+#: debconf-devel.7:534
 msgid ""
 "Debconf supports localization of templates files. This is accomplished by "
 "adding more fields, with translated text in them. Any of the fields can be "
@@ -5965,7 +5992,7 @@ msgstr ""
 "ao campo de Inglês normal."
 
 #. type: Plain text
-#: debconf-devel.7:539
+#: debconf-devel.7:540
 msgid ""
 "Besides the 'Description' field, you should translate the 'Choices' field of "
 "a select or multiselect template. Be sure to list the translated choices in "
@@ -5981,7 +6008,7 @@ msgstr ""
 "Inglês."
 
 #. type: Plain text
-#: debconf-devel.7:551
+#: debconf-devel.7:552
 msgid ""
 "You will find it easier to manage translations if you keep them in separate "
 "files; one file per translation. In the past, the B<debconf-getlang>(1)  and "
@@ -6000,7 +6027,7 @@ msgstr ""
 "por usar este mecanismo novo e melhorado."
 
 #. type: Plain text
-#: debconf-devel.7:557
+#: debconf-devel.7:558
 msgid ""
 "For the details on po-debconf, see its man page. If you're using debhelper, "
 "converting to po-debconf is as simple as running the B<debconf-gettextize>"
@@ -6013,13 +6040,13 @@ msgstr ""
 "(Build-Dependency) ao po-debconf e ao debhelper (E<gt>= 4.1.13)."
 
 #. type: SH
-#: debconf-devel.7:557
+#: debconf-devel.7:558
 #, no-wrap
 msgid "PUTTING IT ALL TOGETHER"
 msgstr "JUNTAR TUDO"
 
 #. type: Plain text
-#: debconf-devel.7:567
+#: debconf-devel.7:568
 msgid ""
 "So you have a config script, a templates file, a postinst script that uses "
 "debconf, and so on. Putting these pieces together into a debian package "
@@ -6040,7 +6067,7 @@ msgstr ""
 "descrito neste manual. E está feito."
 
 #. type: Plain text
-#: debconf-devel.7:570
+#: debconf-devel.7:571
 msgid ""
 "Well, except for testing, debugging, and actually using debconf for more "
 "interesting things than asking a few basic questions. For that, read on.."
@@ -6050,13 +6077,13 @@ msgstr ""
 "continue a ler..."
 
 #. type: SH
-#: debconf-devel.7:570
+#: debconf-devel.7:571
 #, no-wrap
 msgid "DEBUGGING"
 msgstr "DEPURAÇÃO"
 
 #. type: Plain text
-#: debconf-devel.7:575
+#: debconf-devel.7:576
 msgid ""
 "So you have a package that's supposed to use debconf, but it doesn't quite "
 "work. Maybe debconf is just not asking that question you set up. Or maybe "
@@ -6070,7 +6097,7 @@ msgstr ""
 "funcionalidades de depuração."
 
 #. type: Plain text
-#: debconf-devel.7:582
+#: debconf-devel.7:583
 msgid ""
 "The first thing to reach for is the DEBCONF_DEBUG environment variable.  If "
 "you set and export DEBCONF_DEBUG=developer, debconf will output to stderr a "
@@ -6083,7 +6110,7 @@ msgstr ""
 "algo como isto -- o erro de escrita é tornado claro:"
 
 #. type: Plain text
-#: debconf-devel.7:587
+#: debconf-devel.7:588
 #, no-wrap
 msgid ""
 " debconf (developer): E<lt>-- input high debconf/frontand\n"
@@ -6097,7 +6124,7 @@ msgstr ""
 " debconf (developer): --E<gt> 0 ok\n"
 
 #. type: Plain text
-#: debconf-devel.7:591
+#: debconf-devel.7:592
 msgid ""
 "It's rather useful to use debconf's readline frontend when you're debugging "
 "(in the author's opinion), as the questions don't get in the way, and all "
@@ -6108,30 +6135,30 @@ msgstr ""
 "informação de depuração é facilmente preservada e registada em log."
 
 #. type: TP
-#: debconf-devel.7:592
+#: debconf-devel.7:593
 #, no-wrap
 msgid "B<DEBCONF_C_VALUES>"
 msgstr "B<DEBCONF_C_VALUES>"
 
 #. type: Plain text
-#: debconf-devel.7:598
+#: debconf-devel.7:599
 msgid ""
 "If this environment variable is set to 'true', the frontend will display the "
-"values in Choices-C field (if present) of select and multiselect templates "
+"values in Choices-C fields (if present) of select and multiselect templates "
 "rather than the descriptive values."
 msgstr ""
 "Se esta variável de ambiente for definida para 'true', o frontend irá "
-"mostrar os valores no campo Choices-C (se presente) de templates de selecção "
-"e multi-selecção em vez dos valores descritivos."
+"mostrar os valores nos campos Choices-C (se presentes) de templates de "
+"selecção e multi-selecção em vez dos valores descritivos."
 
 #. type: TP
-#: debconf-devel.7:599
+#: debconf-devel.7:600
 #, no-wrap
 msgid "B<debconf-communicate>"
 msgstr "B<debconf-communicate>"
 
 #. type: Plain text
-#: debconf-devel.7:605
+#: debconf-devel.7:606
 msgid ""
 "Another useful tool is the B<debconf-communicate>(1)  program. Fire it up "
 "and you can speak the raw debconf protocol to debconf, interactively. This "
@@ -6142,13 +6169,13 @@ msgstr ""
 "Este é um bom modo de experimentar coisas na hora."
 
 #. type: TP
-#: debconf-devel.7:605
+#: debconf-devel.7:606
 #, no-wrap
 msgid "B<debconf-show>"
 msgstr "B<debconf-show>"
 
 #. type: Plain text
-#: debconf-devel.7:611
+#: debconf-devel.7:612
 msgid ""
 "If a user is reporting a problem, B<debconf-show>(1)  can be used to dump "
 "out all the questions owned by your package, displaying their values and "
@@ -6159,13 +6186,13 @@ msgstr ""
 "todos os valores e se o utilizador as viu."
 
 #. type: TP
-#: debconf-devel.7:611
+#: debconf-devel.7:612
 #, no-wrap
 msgid "B<.debconfrc>"
 msgstr "B<.debconfrc>"
 
 #. type: Plain text
-#: debconf-devel.7:622
+#: debconf-devel.7:623
 msgid ""
 "To avoid the often tedious build/install/debug cycle, it can be useful to "
 "load up your templates with B<debconf-loadtemplate>(1)  and run your config "
@@ -6182,7 +6209,7 @@ msgstr ""
 "pacote fica, com uma base de dados debconf limpa."
 
 #. type: Plain text
-#: debconf-devel.7:628
+#: debconf-devel.7:629
 msgid ""
 "It turns out that if you set up a ~/.debconfrc file for a normal user, "
 "pointing at a personal config.dat and template.dat for the user, you can "
@@ -6197,7 +6224,7 @@ msgstr ""
 "limpa, apenas livre-se dos ficheiros *.dat."
 
 #. type: Plain text
-#: debconf-devel.7:633
+#: debconf-devel.7:634
 msgid ""
 "For details about setting this up, see B<debconf.conf>(5)B<,> and note that /"
 "etc/debconf.conf makes a good template for a personal ~/.debconfrc file."
@@ -6206,19 +6233,19 @@ msgstr ""
 "etc/debconf.conf faz um bom modelo para um ficheiro ~/.debconfrc pessoal."
 
 #. type: SH
-#: debconf-devel.7:634
+#: debconf-devel.7:635
 #, no-wrap
 msgid "ADVANCED PROGRAMMING WITH DEBCONF"
 msgstr "PROGRAMAÇÃO AVANÇADA COM DEBCONF"
 
 #. type: SS
-#: debconf-devel.7:635
+#: debconf-devel.7:636
 #, no-wrap
 msgid "Config file handling"
 msgstr "Manuseamento do ficheiro de configuração"
 
 #. type: Plain text
-#: debconf-devel.7:642
+#: debconf-devel.7:643
 msgid ""
 "Many of you seem to want to use debconf to help manage config files that are "
 "part of your package. Perhaps there is no good default to ship in a "
@@ -6236,7 +6263,7 @@ msgstr ""
 "de configuração que você gerou, e o dpkg-reconfigure, e..."
 
 #. type: Plain text
-#: debconf-devel.7:650
+#: debconf-devel.7:651
 msgid ""
 "There are a lot of ways to do this, and most of them are wrong, and will "
 "often earn you annoyed bug reports. Here is one right way to do it. It "
@@ -6254,12 +6281,12 @@ msgstr ""
 "escrever) fica mais complicado."
 
 #. type: Plain text
-#: debconf-devel.7:652
+#: debconf-devel.7:653
 msgid "Your config script will look something like this:"
 msgstr "O seu script config irá parecer algo como isto:"
 
 #. type: Plain text
-#: debconf-devel.7:657 debconf-devel.7:679
+#: debconf-devel.7:658 debconf-devel.7:680
 #, no-wrap
 msgid ""
 " #!/bin/sh\n"
@@ -6273,7 +6300,7 @@ msgstr ""
 " . /usr/share/debconf/confmodule\n"
 
 #. type: Plain text
-#: debconf-devel.7:661
+#: debconf-devel.7:662
 #, no-wrap
 msgid ""
 " # Load config file, if it exists.\n"
@@ -6285,7 +6312,7 @@ msgstr ""
 " \t. $CONFIGFILE || true\n"
 
 #. type: Plain text
-#: debconf-devel.7:667
+#: debconf-devel.7:668
 #, no-wrap
 msgid ""
 " \t# Store values from config file into\n"
@@ -6301,7 +6328,7 @@ msgstr ""
 " fi\n"
 
 #. type: Plain text
-#: debconf-devel.7:672
+#: debconf-devel.7:673
 #, no-wrap
 msgid ""
 " # Ask questions.\n"
@@ -6315,12 +6342,12 @@ msgstr ""
 " db_go || true\n"
 
 #. type: Plain text
-#: debconf-devel.7:674
+#: debconf-devel.7:675
 msgid "And the postinst will look something like this:"
 msgstr "E o postinst irá parecer algo como isto:"
 
 #. type: Plain text
-#: debconf-devel.7:688
+#: debconf-devel.7:689
 #, no-wrap
 msgid ""
 " # Generate config file, if it doesn't exist.\n"
@@ -6342,7 +6369,7 @@ msgstr ""
 " fi\n"
 
 #. type: Plain text
-#: debconf-devel.7:698
+#: debconf-devel.7:699
 #, no-wrap
 msgid ""
 " # Substitute in the values from the debconf db.\n"
@@ -6366,7 +6393,7 @@ msgstr ""
 " cp -a -f $CONFIGFILE $CONFIGFILE.tmp\n"
 
 #. type: Plain text
-#: debconf-devel.7:705
+#: debconf-devel.7:706
 #, no-wrap
 msgid ""
 " # If the admin deleted or commented some variables but then set\n"
@@ -6384,7 +6411,7 @@ msgstr ""
 " \techo \"BAR=\" E<gt>E<gt> $CONFIGFILE\n"
 
 #. type: Plain text
-#: debconf-devel.7:710
+#: debconf-devel.7:711
 #, no-wrap
 msgid ""
 " sed -e \"s/^ *FOO=.*/FOO=\\e\"$FOO\\e\"/\" \\e\n"
@@ -6398,7 +6425,7 @@ msgstr ""
 " mv -f $CONFIGFILE.tmp $CONFIGFILE\n"
 
 #. type: Plain text
-#: debconf-devel.7:718
+#: debconf-devel.7:719
 msgid ""
 "Consider how these two scripts handle all the cases. On fresh installs the "
 "questions are asked by the config script, and a new config file generated by "
@@ -6418,13 +6445,13 @@ msgstr ""
 "ficheiro de configuração, deixando o resto inalterado."
 
 #. type: SS
-#: debconf-devel.7:718
+#: debconf-devel.7:719
 #, no-wrap
 msgid "Letting the user back up"
 msgstr "Permitir que o utilizador volte atrás"
 
 #. type: Plain text
-#: debconf-devel.7:724
+#: debconf-devel.7:725
 msgid ""
 "Few things are more frustrating when using a system like debconf than being "
 "asked a question, and answering it, then moving on to another screen with a "
@@ -6437,7 +6464,7 @@ msgstr ""
 "na última pergunta, e você quer voltar atrás e descobre que já não pode."
 
 #. type: Plain text
-#: debconf-devel.7:730
+#: debconf-devel.7:731
 msgid ""
 "Since debconf is driven by your config script, it can't jump back to a "
 "previous question on its own but with a little help from you, it can "
@@ -6453,7 +6480,7 @@ msgstr ""
 "parâmetro."
 
 #. type: Plain text
-#: debconf-devel.7:734
+#: debconf-devel.7:735
 msgid ""
 "Then after each GO command, you must test to see if the user asked to back "
 "up (debconf returns a code of 30), and if so jump back to the previous "
@@ -6464,7 +6491,7 @@ msgstr ""
 "volta para a questão anterior."
 
 #. type: Plain text
-#: debconf-devel.7:740
+#: debconf-devel.7:741
 msgid ""
 "There are several ways to write the control structures of your program so it "
 "can jump back to previous questions when necessary. You can write goto-laden "
@@ -6480,7 +6507,7 @@ msgstr ""
 "pode preencher e expandir."
 
 #. type: Plain text
-#: debconf-devel.7:745
+#: debconf-devel.7:746
 #, no-wrap
 msgid ""
 " #!/bin/sh\n"
@@ -6494,7 +6521,7 @@ msgstr ""
 " db_capb backup\n"
 
 #. type: Plain text
-#: debconf-devel.7:772
+#: debconf-devel.7:773
 #, no-wrap
 msgid ""
 " STATE=1\n"
@@ -6552,7 +6579,7 @@ msgstr ""
 "  \tesac\n"
 
 #. type: Plain text
-#: debconf-devel.7:779
+#: debconf-devel.7:780
 #, no-wrap
 msgid ""
 " \tif db_go; then\n"
@@ -6570,7 +6597,7 @@ msgstr ""
 " done\n"
 
 #. type: Plain text
-#: debconf-devel.7:790
+#: debconf-devel.7:791
 #, no-wrap
 msgid ""
 " if [ $STATE -eq 0 ]; then\n"
@@ -6596,7 +6623,7 @@ msgstr ""
 " fi\n"
 
 #. type: Plain text
-#: debconf-devel.7:795
+#: debconf-devel.7:796
 msgid ""
 "Note that if all your config script does is ask a few unrelated questions, "
 "then there is no need for the state machine. Just ask them all, and GO; "
@@ -6609,15 +6636,15 @@ msgstr ""
 "todas no mesmo écran, e o utilizador não precisa de voltar a trás."
 
 #. type: SS
-#: debconf-devel.7:795
+#: debconf-devel.7:796
 #, no-wrap
 msgid "Preventing infinite loops"
 msgstr "Prevenindo loops infinitos"
 
 #. type: Plain text
-#: debconf-devel.7:799
+#: debconf-devel.7:800
 msgid ""
-"One gotcha with debconf comes up if you have a loop in your config script.  "
+"One gotcha with debconf comes up if you have a loop in your config script. "
 "Suppose you're asking for input and validating it, and looping if it's not "
 "valid:"
 msgstr ""
@@ -6626,7 +6653,7 @@ msgstr ""
 "um looping caso não seja válida:"
 
 #. type: Plain text
-#: debconf-devel.7:809
+#: debconf-devel.7:810
 #, no-wrap
 msgid ""
 " ok=''\n"
@@ -6650,7 +6677,7 @@ msgstr ""
 " done\n"
 
 #. type: Plain text
-#: debconf-devel.7:816
+#: debconf-devel.7:817
 msgid ""
 "This looks ok at first glance. But consider what happens if the value of foo/"
 "bar is \"\" when this loop is entered, and the user has their priority set "
@@ -6666,7 +6693,7 @@ msgstr ""
 "vicioso..."
 
 #. type: Plain text
-#: debconf-devel.7:822
+#: debconf-devel.7:823
 msgid ""
 "One fix for this is to make sure that before the loop is entered, the value "
 "of foo/bar is set to something that will pass the test in the loop. So for "
@@ -6679,7 +6706,7 @@ msgstr ""
 "foo/bar antes de entrar no ciclo."
 
 #. type: Plain text
-#: debconf-devel.7:826
+#: debconf-devel.7:827
 msgid ""
 "Another fix is to check the return code of the INPUT command. If it is 30 "
 "then the user is not being shown the question you asked them, and you should "
@@ -6690,13 +6717,13 @@ msgstr ""
 "sair do ciclo."
 
 #. type: SS
-#: debconf-devel.7:826
+#: debconf-devel.7:827
 #, no-wrap
 msgid "Choosing among related packages"
 msgstr "Escolhendo entre pacotes relacionados"
 
 #. type: Plain text
-#: debconf-devel.7:831
+#: debconf-devel.7:832
 msgid ""
 "Sometimes a set of related packages can be installed, and you want to prompt "
 "the user which of the set should be used by default. Examples of such sets "
@@ -6708,7 +6735,7 @@ msgstr ""
 "ficheiros do dicionário ispell."
 
 #. type: Plain text
-#: debconf-devel.7:837
+#: debconf-devel.7:838
 msgid ""
 "While it would be possible for each package in the set to simply prompt, "
 "\"Should this package be default?\", this leads to a lot of repetitive "
@@ -6723,7 +6750,7 @@ msgstr ""
 "utilizador escolher entre eles. Aqui está como."
 
 #. type: Plain text
-#: debconf-devel.7:840
+#: debconf-devel.7:841
 msgid ""
 "Make all the packages in the set use a shared template. Something like this:"
 msgstr ""
@@ -6731,7 +6758,7 @@ msgstr ""
 "como isto:"
 
 #. type: Plain text
-#: debconf-devel.7:847
+#: debconf-devel.7:848
 #, no-wrap
 msgid ""
 " Template: shared/window-manager\n"
@@ -6749,7 +6776,7 @@ msgstr ""
 "  predefinição quando o X arranca.\n"
 
 #. type: Plain text
-#: debconf-devel.7:850
+#: debconf-devel.7:851
 msgid ""
 "Each package should include a copy of the template. Then it should include "
 "some code like this in its config script:"
@@ -6758,7 +6785,7 @@ msgstr ""
 "código como este no seu script config:"
 
 #. type: Plain text
-#: debconf-devel.7:855
+#: debconf-devel.7:856
 #, no-wrap
 msgid ""
 " db_metaget shared/window-manager owners\n"
@@ -6772,7 +6799,7 @@ msgstr ""
 " CHOICES=$RET\n"
 
 #. type: Plain text
-#: debconf-devel.7:860
+#: debconf-devel.7:861
 #, no-wrap
 msgid ""
 " if [ \"$OWNERS\" != \"$CHOICES\" ]; then\n"
@@ -6786,7 +6813,7 @@ msgstr ""
 " fi\n"
 
 #. type: Plain text
-#: debconf-devel.7:863
+#: debconf-devel.7:864
 #, no-wrap
 msgid ""
 " db_input medium shared/window-manager || true\n"
@@ -6796,7 +6823,7 @@ msgstr ""
 " db_go || true\n"
 
 #. type: Plain text
-#: debconf-devel.7:871
+#: debconf-devel.7:872
 msgid ""
 "A bit of an explanation is called for. By the time your config script runs, "
 "debconf has already read in all the templates for the packages that are "
@@ -6813,7 +6840,7 @@ msgstr ""
 "delimitada por vírgulas e espaços)."
 
 #. type: Plain text
-#: debconf-devel.7:876
+#: debconf-devel.7:877
 msgid ""
 "The METAGET command can be used to get the list of owners and the list of "
 "choices. If they are different, then a new package has been installed. So "
@@ -6826,7 +6853,7 @@ msgstr ""
 "lista de donos, e fazer a pergunta."
 
 #. type: Plain text
-#: debconf-devel.7:880
+#: debconf-devel.7:881
 msgid ""
 "When a package is removed, you probably want to see if that package is the "
 "currently selected choice, and if so, prompt the user to select a different "
@@ -6837,7 +6864,7 @@ msgstr ""
 "seleccionar um pacote diferente para o substituir."
 
 #. type: Plain text
-#: debconf-devel.7:884
+#: debconf-devel.7:885
 msgid ""
 "This can be accomplished by adding something like this to the prerm scripts "
 "of all related packages (replacing E<lt>packageE<gt> with the package name):"
@@ -6847,7 +6874,7 @@ msgstr ""
 "pacote):"
 
 #. type: Plain text
-#: debconf-devel.7:889
+#: debconf-devel.7:890
 #, no-wrap
 msgid ""
 " if [ -e /usr/share/debconf/confmodule ]; then\n"
@@ -6861,7 +6888,7 @@ msgstr ""
 " \tdb_unregister shared/window-manager\n"
 
 #. type: Plain text
-#: debconf-devel.7:900
+#: debconf-devel.7:901
 #, no-wrap
 msgid ""
 " \t# See if the shared question still exists.\n"
@@ -6870,7 +6897,7 @@ msgid ""
 " \t\tdb_subst shared/window-manager choices $RET\n"
 " \t\tdb_metaget shared/window-manager value\n"
 " \t\tif [ \"E<lt>packageE<gt>\" = \"$RET\" ] ; then\n"
-" \t\t\tdb_fset shared/window-manage seen false\n"
+" \t\t\tdb_fset shared/window-manager seen false\n"
 " \t\t\tdb_input high shared/window-manager || true\n"
 " \t\t\tdb_go || true\n"
 " \t\tfi\n"
@@ -6881,13 +6908,13 @@ msgstr ""
 " \t\tdb_subst shared/window-manager choices $RET\n"
 " \t\tdb_metaget shared/window-manager value\n"
 " \t\tif [ \"E<lt>packageE<gt>\" = \"$RET\" ] ; then\n"
-" \t\t\tdb_fset shared/window-manage seen false\n"
+" \t\t\tdb_fset shared/window-manager seen false\n"
 " \t\t\tdb_input high shared/window-manager || true\n"
 " \t\t\tdb_go || true\n"
 " \t\tfi\n"
 
 #. type: Plain text
-#: debconf-devel.7:905
+#: debconf-devel.7:906
 #, no-wrap
 msgid ""
 " \t\t# Now do whatever the postinst script did\n"
@@ -6901,13 +6928,13 @@ msgstr ""
 " fi\n"
 
 #. type: SH
-#: debconf-devel.7:905
+#: debconf-devel.7:906
 #, no-wrap
 msgid "HACKS"
 msgstr "TRUQUES"
 
 #. type: Plain text
-#: debconf-devel.7:908
+#: debconf-devel.7:909
 msgid ""
 "Debconf is currently not fully integrated into dpkg (but I want to change "
 "this in the future), and so some messy hacks are currently called for."
@@ -6917,7 +6944,7 @@ msgstr ""
 "truques feiosos."
 
 #. type: Plain text
-#: debconf-devel.7:919
+#: debconf-devel.7:920
 msgid ""
 "The worst of these involves getting the config script to run. The way that "
 "works now is the config script will be run when the package is pre-"
@@ -6939,7 +6966,7 @@ msgstr ""
 "um passo nesta direcção."
 
 #. type: Plain text
-#: debconf-devel.7:930
+#: debconf-devel.7:931
 msgid ""
 "A related hack is getting debconf running when a config script, postinst, or "
 "other program that uses it starts up. After all, they expect to be able to "
@@ -6964,7 +6991,7 @@ msgstr ""
 "é invocado, e transformá-lo em algo como um daemon de transição."
 
 #. type: Plain text
-#: debconf-devel.7:941
+#: debconf-devel.7:942
 msgid ""
 "It's rather hackish how debconf figures out what templates files to load, "
 "and when it loads them. When the config, preinst, and postinst scripts "
@@ -6988,7 +7015,7 @@ msgstr ""
 "capazes de usar debconf-loadtemplate manualmente."
 
 #. type: Plain text
-#: debconf-devel.7:949
+#: debconf-devel.7:950
 msgid ""
 "/usr/share/debconf/confmodule's historic behavior of playing with file "
 "descriptors and setting up a fd #3 that talks to debconf, can cause all "
@@ -7007,7 +7034,7 @@ msgstr ""
 "ou outro mecanismo que não seja o stdio."
 
 #. type: Plain text
-#: debconf-devel.7:957
+#: debconf-devel.7:958
 msgid ""
 "Debconf sets DEBCONF_RECONFIGURE=1 before running postinst scripts, so a "
 "postinst script that needs to avoid some expensive operation when "
@@ -7015,7 +7042,7 @@ msgid ""
 "thing would be to pass $1 = \"reconfigure\", but doing so without breaking "
 "all the postinsts that use debconf is difficult. The migration plan away "
 "from this hack is to encourage people to write postinsts that accept "
-"\"reconfigure\", and once they all do, begin passing that variable."
+"\"reconfigure\", and once they all do, begin passing that parameter."
 msgstr ""
 "Debconf define DEBCONF_RECONFIGURE=1 antes de correr scripts postinst, então "
 "um script postinst que precise de evitar alguma operação cara quando "
@@ -7023,15 +7050,15 @@ msgstr ""
 "correcto seria passar $1 = \"reconfigure\", mas fazê-lo sem quebrar todos os "
 "postinsts que usam debconf é difícil. O plano de migração para fugir a este "
 "truque é encorajar as pessoas a escrever postinsts que aceitem \"reconfigure"
-"\", e quanto todos o fizerem, começar a passar essa variável."
+"\", e quanto todos o fizerem, começar a passar esse parâmetro."
 
 #. type: Plain text
-#: debconf-devel.7:960
+#: debconf-devel.7:961
 msgid "B<debconf>(7)  is the debconf user's guide."
 msgstr "B<debconf>(7) é o guia do utilizador do debconf."
 
 #. type: Plain text
-#: debconf-devel.7:963
+#: debconf-devel.7:964
 msgid ""
 "The debconf specification in debian policy is the canonical definition of "
 "the debconf protocol. /usr/share/doc/debian-policy/debconf_specification.txt."
@@ -7041,7 +7068,7 @@ msgstr ""
 "protocolo debconf. /usr/share/doc/debian-policy/debconf_specification.txt.gz"
 
 #. type: Plain text
-#: debconf-devel.7:967
+#: debconf-devel.7:968
 msgid ""
 "B<debconf.conf>(5)  has much useful information, including some info about "
 "the backend database."

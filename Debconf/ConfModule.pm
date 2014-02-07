@@ -228,13 +228,16 @@ sub process_command {
 	my $this=shift;
 	
 	debug developer => "<-- $_";
-	return 1 unless defined && ! /^\s*#/; # Skip blank lines, comments.
 	chomp;
 	my ($command, @params);
 	if (defined $this->client_capb and grep { $_ eq 'escape' } @{$this->client_capb}) {
 		($command, @params)=unescape_split($_);
 	} else {
 		($command, @params)=split(' ', $_);
+	}
+	if (! defined $command) {
+		return $codes{syntaxerror}.' '.
+			"Bad line \"$_\" received from confmodule.";
 	}
 	$command=lc($command);
 	# This command could not be handled by a sub.
@@ -424,7 +427,11 @@ sub command_capb {
 	my $this=shift;
 	$this->client_capb([@_]);
 	# Set capb_backup on the frontend if the client can backup.
-	$this->frontend->capb_backup(1) if grep { $_ eq 'backup' } @_;
+	if (grep { $_ eq 'backup' } @_) {
+		$this->frontend->capb_backup(1);
+	} else {
+		$this->frontend->capb_backup('');
+	}
 	# Multiselect is added as a capability to fix a backwards
 	# compatability problem.
 	my @capb=('multiselect', 'escape');

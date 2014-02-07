@@ -23,15 +23,12 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 
+from __future__ import print_function
+
 import sys, os
 import errno
 import re
-try:
-    import subprocess
-    using_subprocess = True
-except ImportError:
-    import popen2
-    using_subprocess = False
+import subprocess
 import fcntl
 
 class DebconfError(Exception):
@@ -73,7 +70,7 @@ class Debconf:
             try:
                 resp = self.read.readline().rstrip('\n')
                 break
-            except IOError, e:
+            except IOError as e:
                 if e.errno == errno.EINTR:
                     continue
                 else:
@@ -108,7 +105,7 @@ class Debconf:
         try:
             self.input(priority, question)
             return 1
-        except DebconfError, e:
+        except DebconfError as e:
             if e.args[0] != 30:
                 raise
         return 0
@@ -124,29 +121,20 @@ class Debconf:
 class DebconfCommunicator(Debconf, object):
     def __init__(self, owner, title=None, cloexec=False):
         args = ['debconf-communicate', '-fnoninteractive', owner]
-        if using_subprocess:
-            self.dccomm = subprocess.Popen(args, stdin=subprocess.PIPE, stdout=subprocess.PIPE, close_fds=True)
-            read = self.dccomm.stdout
-            write = self.dccomm.stdin
-        else:
-            self.dccomm = popen2.Popen3(args)
-            read = self.dccomm.fromchild
-            write = self.dccomm.tochild
+        self.dccomm = subprocess.Popen(
+            args, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+            close_fds=True, universal_newlines=True)
         super(DebconfCommunicator, self).__init__(title=title,
-                                                  read=read,
-                                                  write=write)
+                                                  read=self.dccomm.stdout,
+                                                  write=self.dccomm.stdin)
         if cloexec:
             fcntl.fcntl(self.read.fileno(), fcntl.F_SETFD, fcntl.FD_CLOEXEC)
             fcntl.fcntl(self.write.fileno(), fcntl.F_SETFD, fcntl.FD_CLOEXEC)
 
     def shutdown(self):
         if self.dccomm is not None:
-            if using_subprocess:
-                self.dccomm.stdin.close()
-                self.dccomm.stdout.close()
-            else:
-                self.dccomm.tochild.close()
-                self.dccomm.fromchild.close()
+            self.dccomm.stdin.close()
+            self.dccomm.stdout.close()
             self.dccomm.wait()
             self.dccomm = None
 
@@ -178,7 +166,7 @@ if __name__ == '__main__':
     less = db.getBoolean('less/add_mime_handler')
     aptlc = db.getString('apt-listchanges/email-address')
     db.stop()
-    print db.version
-    print db.capabilities
-    print less
-    print aptlc
+    print(db.version)
+    print(db.capabilities)
+    print(less)
+    print(aptlc)
