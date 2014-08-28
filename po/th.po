@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-19 19:05-0400\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
 "PO-Revision-Date: 2012-08-02 13:11+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -201,7 +201,7 @@ msgstr ""
 "โดยเปลี่ยนแปลงรายการตามต้องการ แล้วบันทึกและออกจากเครื่องมือแก้ไขข้อความ จากนั้น debconf "
 "จะอ่านแฟ้มที่แก้ไข แล้วใช้ค่าต่างๆ ที่คุณป้อนเพื่อตั้งค่าระบบ"
 
-#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
@@ -215,7 +215,7 @@ msgstr "การติดต่อแบบนี้ จำเป็นต้�
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU ทำงานร่วมกับบัฟเฟอร์ของเชลล์ของ emacs ไม่ได้"
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "มีต่อ"
 
@@ -307,10 +307,17 @@ msgstr "debconf: ไม่สามารถ chmod: %s"
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "ตั้งค่าขั้นต้นให้กับ %s ไม่สำเร็จ โดยจบด้วยสถานะ %s"
 
-#: ../dpkg-reconfigure:105
+#: ../dpkg-reconfigure:99
+#, fuzzy
+#| msgid ""
+#| "Usage: dpkg-reconfigure [options] packages\n"
+#| "  -a,  --all\t\t\tReconfigure all packages.\n"
+#| "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
+#| "       --default-priority\tUse default priority instead of low.\n"
+#| "       --force\t\t\tForce reconfiguration of broken packages.\n"
+#| "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
@@ -323,29 +330,24 @@ msgstr ""
 "       --force\t\t\tบังคับตั้งค่าแพกเกจที่เสียหายใหม่\n"
 "       --no-reload\t\tไม่ต้องโหลดต้นแบบคำถามซ้ำ (ใช้ด้วยความระมัดระวัง)"
 
-#: ../dpkg-reconfigure:119
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s ต้องเรียกโดย root"
 
-#: ../dpkg-reconfigure:152
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "กรุณาเลือกแพกเกจที่จะตั้งค่าใหม่"
 
-#: ../dpkg-reconfigure:177
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s ไม่ได้ติดตั้งไว้"
 
-#: ../dpkg-reconfigure:181
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s เสียหาย หรือติดตั้งไม่สมบูรณ์"
-
-#: ../dpkg-reconfigure:294
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "ไม่สามารถอ่านแฟ้มสถานะ: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -414,3 +416,6 @@ msgid ""
 msgstr ""
 "\n"
 "  -o,  --owner=package\t\tกำหนดแพกเกจที่เป็นเจ้าของคำสั่ง"
+
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "ไม่สามารถอ่านแฟ้มสถานะ: %s"

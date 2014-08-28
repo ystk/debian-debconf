@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf_po\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-19 19:05-0400\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
 "PO-Revision-Date: 2006-09-12 17:25+0000\n"
 "Last-Translator: Priti Patil <prithisd@gmail.com>\n"
 "Language-Team:  Marathi, janabhaaratii, C-DAC, Mumbai, India "
@@ -209,7 +209,7 @@ msgstr ""
 "पडा. त्या ठिकाणी डेबकाॅन्फ ही संपादित फाईल वाचेल, व प्रणालीच्या संरचनेकरिता आपण दिलेल्या "
 "मूल्यांवा वापर करेल."
 
-#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
@@ -223,7 +223,7 @@ msgstr "या दर्शनी भागासाठी एक नियं�
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "संज्ञा::वाचनओळ::जीएनयू ही इमॅकस् शेल बफरांशी विसंगत आहे."
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "आणखी"
 
@@ -316,11 +316,10 @@ msgstr "डेबकाॅन्फ: परवानगीबदल करता
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s पूर्वसंरचित झाले नाही, निर्गमन स्थिती %s"
 
-#: ../dpkg-reconfigure:105
+#: ../dpkg-reconfigure:99
 #, fuzzy
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
@@ -332,29 +331,24 @@ msgstr ""
 "       --मूलनिर्धारित-अग्रक्रम\tवापरा कमी एेवजी मूलनिर्धारित अग्रक्रम.\n"
 "       --बळजबरी\t\t\tबळजबरी करून मोडक्या पॅकेजेस्ची पुनर्संरचना करा."
 
-#: ../dpkg-reconfigure:119
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s चालवण्याकरिता मूल असणे आवश्यक"
 
-#: ../dpkg-reconfigure:152
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "पुनर्रचनेकरिता पॅकेज निश्चित करा"
 
-#: ../dpkg-reconfigure:177
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s अधिष्ठापित झालेले नाही"
 
-#: ../dpkg-reconfigure:181
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s मोडलेले आहे वा पूर्ण अधिष्ठापित झालेले नाही"
-
-#: ../dpkg-reconfigure:294
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "स्थिती फाइल वाचता येत नाही: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -423,3 +417,6 @@ msgid ""
 msgstr ""
 "\n"
 "  -o,  --मालक=पॅकेज\t\tनिश्चिती ही आज्ञा मालकीची असलेले पॅकेज."
+
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "स्थिती फाइल वाचता येत नाही: %s"

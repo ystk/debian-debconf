@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debconf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-19 19:05-0400\n"
+"POT-Creation-Date: 2014-04-22 20:04-0400\n"
 "PO-Revision-Date: 2012-07-30 10:14+0100\n"
 "Last-Translator: Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team: Portuguese <traduz@debianpt.org>\n"
@@ -38,7 +38,8 @@ msgstr ""
 
 #: ../Debconf/Config.pm:134
 msgid "Template database not specified in config file."
-msgstr "Base de dados de templates não especificada no ficheiro de configuração."
+msgstr ""
+"Base de dados de templates não especificada no ficheiro de configuração."
 
 #: ../Debconf/Config.pm:139
 msgid ""
@@ -114,8 +115,8 @@ msgid ""
 "Debconf is not confident this error message was displayed, so it mailed it "
 "to you."
 msgstr ""
-"O Debconf não está confiante que esta mensagem de erro foi mostrada, por isso "
-"enviou-a por mail para si."
+"O Debconf não está confiante que esta mensagem de erro foi mostrada, por "
+"isso enviou-a por mail para si."
 
 #: ../Debconf/Element/Noninteractive/Error.pm:67
 msgid "Debconf"
@@ -210,10 +211,11 @@ msgstr ""
 "familiarizado com os ficheiros de configuração standard de unix, este "
 "ficheiro vai-lhe parecer familiar -- contém comentários intercalados com "
 "itens de configuração. Edite o ficheiro, modificando qualquer item que ache "
-"necessário, depois grave-o e saia. Nessa altura, o debconf irá ler o ficheiro "
-"editado, e utilizar os valores que introduziu para configurar o sistema."
+"necessário, depois grave-o e saia. Nessa altura, o debconf irá ler o "
+"ficheiro editado, e utilizar os valores que introduziu para configurar o "
+"sistema."
 
-#: ../Debconf/FrontEnd/Gnome.pm:144 ../Debconf/FrontEnd/Kde.pm:100
+#: ../Debconf/FrontEnd/Gnome.pm:161 ../Debconf/FrontEnd/Kde.pm:100
 #: ../Debconf/FrontEnd/Kde.pm:104
 #, perl-format
 msgid "Debconf on %s"
@@ -227,14 +229,15 @@ msgstr "Este frontend necessita de um tty controlador."
 msgid "Term::ReadLine::GNU is incompatable with emacs shell buffers."
 msgstr "Term::ReadLine::GNU é incompatível com buffers de shell emacs."
 
-#: ../Debconf/FrontEnd/Teletype.pm:96
+#: ../Debconf/FrontEnd/Teletype.pm:99
 msgid "More"
 msgstr "Mais"
 
 #: ../Debconf/FrontEnd/Web.pm:66
 #, perl-format
 msgid "Note: Debconf is running in web mode. Go to http://localhost:%i/"
-msgstr "Nota: o Debconf está a correr em modo web. Vá para http://localhost:%i/"
+msgstr ""
+"Nota: o Debconf está a correr em modo web. Vá para http://localhost:%i/"
 
 #: ../Debconf/FrontEnd/Web.pm:166
 msgid "Back"
@@ -322,10 +325,17 @@ msgstr "debconf: não pode fazer chmod: %s"
 msgid "%s failed to preconfigure, with exit status %s"
 msgstr "%s falhou a pré-configuração, com estado de saída %s"
 
-#: ../dpkg-reconfigure:105
+#: ../dpkg-reconfigure:99
+#, fuzzy
+#| msgid ""
+#| "Usage: dpkg-reconfigure [options] packages\n"
+#| "  -a,  --all\t\t\tReconfigure all packages.\n"
+#| "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
+#| "       --default-priority\tUse default priority instead of low.\n"
+#| "       --force\t\t\tForce reconfiguration of broken packages.\n"
+#| "       --no-reload\t\tDo not reload templates. (Use with caution.)"
 msgid ""
 "Usage: dpkg-reconfigure [options] packages\n"
-"  -a,  --all\t\t\tReconfigure all packages.\n"
 "  -u,  --unseen-only\t\tShow only not yet seen questions.\n"
 "       --default-priority\tUse default priority instead of low.\n"
 "       --force\t\t\tForce reconfiguration of broken packages.\n"
@@ -339,29 +349,24 @@ msgstr ""
 "       --force\t\t\tForçar a reconfiguração de pacotes com problemas.\t--no-"
 "reload\t\tNão carregar novamente os modelos. (Usar com cuidado.)"
 
-#: ../dpkg-reconfigure:119
+#: ../dpkg-reconfigure:111
 #, perl-format
 msgid "%s must be run as root"
 msgstr "%s tem de ser corrido como root"
 
-#: ../dpkg-reconfigure:152
+#: ../dpkg-reconfigure:138
 msgid "please specify a package to reconfigure"
 msgstr "por favor especifique um pacote para reconfigurar"
 
-#: ../dpkg-reconfigure:177
+#: ../dpkg-reconfigure:162
 #, perl-format
 msgid "%s is not installed"
 msgstr "%s não está instalado"
 
-#: ../dpkg-reconfigure:181
+#: ../dpkg-reconfigure:166
 #, perl-format
 msgid "%s is broken or not fully installed"
 msgstr "%s está estragado ou não totalmente instalado"
-
-#: ../dpkg-reconfigure:294
-#, perl-format
-msgid "Cannot read status file: %s"
-msgstr "Não pode ler o estado do ficheiro: %s"
 
 #: ../debconf-communicate:53
 msgid "Usage: debconf-communicate [options] [package]"
@@ -431,6 +436,9 @@ msgid ""
 msgstr ""
 "\n"
 "  -o,  --owner=pacote\t\tDefine o pacote que é dono do comando."
+
+#~ msgid "Cannot read status file: %s"
+#~ msgstr "Não pode ler o estado do ficheiro: %s"
 
 #~ msgid "Save (mail) Note"
 #~ msgstr "Gravar (mail) Nota"
